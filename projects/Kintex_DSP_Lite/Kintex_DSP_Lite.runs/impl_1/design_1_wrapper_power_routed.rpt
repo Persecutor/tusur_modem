@@ -1,0 +1,199 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date             : Fri Jun 20 12:33:20 2025
+| Host             : TOR00094 running 64-bit major release  (build 9200)
+| Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+| Design           : design_1_wrapper
+| Device           : xc7k325tffg676-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 2.959        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 2.769        |
+| Device Static (W)        | 0.190        |
+| Effective TJA (C/W)      | 1.9          |
+| Max Ambient (C)          | 79.4         |
+| Junction Temperature (C) | 30.6         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.245 |       19 |       --- |             --- |
+| Slice Logic              |     0.174 |   134690 |       --- |             --- |
+|   LUT as Logic           |     0.122 |    36229 |    203800 |           17.78 |
+|   Register               |     0.019 |    64815 |    407600 |           15.90 |
+|   LUT as Shift Register  |     0.018 |     5142 |     64000 |            8.03 |
+|   CARRY4                 |     0.013 |     5100 |     50950 |           10.01 |
+|   LUT as Distributed RAM |     0.001 |     1178 |     64000 |            1.84 |
+|   F7/F8 Muxes            |    <0.001 |     1221 |    203800 |            0.60 |
+|   Others                 |     0.000 |     9609 |       --- |             --- |
+| Signals                  |     0.204 |    86325 |       --- |             --- |
+| Block RAM                |     0.181 |       88 |       445 |           19.78 |
+| MMCM                     |     0.341 |        3 |        10 |           30.00 |
+| PLL                      |     0.155 |        1 |        10 |           10.00 |
+| DSPs                     |     0.039 |      126 |       840 |           15.00 |
+| I/O                      |     1.430 |      225 |       400 |           56.25 |
+| Static Power             |     0.190 |          |           |                 |
+| Total                    |     2.959 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.971 |       0.882 |      0.089 |
+| Vccaux    |       1.800 |     0.421 |       0.392 |      0.029 |
+| Vcco33    |       3.300 |     0.072 |       0.071 |      0.001 |
+| Vcco25    |       2.500 |     0.255 |       0.254 |      0.001 |
+| Vcco18    |       1.800 |     0.168 |       0.167 |      0.001 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.017 |       0.012 |      0.005 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.9                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.4                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| Clock                                                                                      | Domain                                                                                                                                                               | Constraint (ns) |
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+| axi_c2c_selio_rx_clk_in                                                                    | AXI_TX_CLK_IN                                                                                                                                                        |            10.0 |
+| axi_periph_clk_design_1_CLK_COMMON_0                                                       | design_1_i/CLK_AXI/CLK_COMMON/inst/axi_periph_clk_design_1_CLK_COMMON_0                                                                                              |            10.0 |
+| clk_out                                                                                    | design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/clk_out  |            10.0 |
+| clk_out1_design_1_clk_wiz_0_0                                                              | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0                                                                                                              |             5.4 |
+| clk_out2_design_1_clk_wiz_0_0                                                              | design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0                                                                                                              |             4.9 |
+| clkfbout                                                                                   | design_1_i/AXI_Peripheral/AXI_C2C/inst/master_fpga_gen.axi_chip2chip_master_phy_inst/master_sio_phy.axi_chip2chip_sio_input_inst/axi_chip2chip_clk_gen_inst/clkfbout |            10.0 |
+| clkfbout_design_1_CLK_COMMON_0                                                             | design_1_i/CLK_AXI/CLK_COMMON/inst/clkfbout_design_1_CLK_COMMON_0                                                                                                    |            25.0 |
+| clkfbout_design_1_clk_DSP_0                                                                | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/clkfbout_design_1_clk_DSP_0                                                                                           |            25.0 |
+| clkfbout_design_1_clk_wiz_0_0                                                              | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0                                                                                                              |            32.6 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs                                                                                                 |            33.0 |
+| delay_clk_design_1_CLK_COMMON_0                                                            | design_1_i/CLK_AXI/CLK_COMMON/inst/delay_clk_design_1_CLK_COMMON_0                                                                                                   |             5.0 |
+| prm_clk_40                                                                                 | FPGA_REF_40MHZ                                                                                                                                                       |            25.0 |
+| prm_clk_ad1                                                                                | ad9361_DCLK_1_P                                                                                                                                                      |             4.0 |
+| prm_clk_ad2                                                                                | ad9361_DCLK_2_P                                                                                                                                                      |             4.0 |
+| prm_clk_ad3                                                                                | ad9361_DCLK_3_P                                                                                                                                                      |             4.0 |
+| prm_clk_ad4                                                                                | ad9364_DCLK_P                                                                                                                                                        |             4.0 |
+| sample_rate_30_72_design_1_clk_DSP_0                                                       | design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72_design_1_clk_DSP_0                                                                                  |            32.6 |
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------------+-----------+
+| Name                      | Power (W) |
++---------------------------+-----------+
+| design_1_wrapper          |     2.769 |
+|   dbg_hub                 |     0.005 |
+|     inst                  |     0.005 |
+|       BSCANID.u_xsdbm_id  |     0.005 |
+|   design_1_i              |     2.751 |
+|     AD9361_CTRL           |     0.979 |
+|       AD9361_1            |     0.392 |
+|       AD9361_2            |     0.236 |
+|       AD9361_3            |     0.232 |
+|       ad9361_clk          |     0.119 |
+|     AD9364                |     0.378 |
+|       axi_ad9364          |     0.377 |
+|     AXI_Peripheral        |     0.447 |
+|       AXI_C2C             |     0.441 |
+|       AXI_C2C_axi_periph  |     0.001 |
+|       AXI_DMA             |     0.005 |
+|     CLK_AXI               |     0.107 |
+|       CLK_COMMON          |     0.106 |
+|     Current_turning_off_0 |     0.021 |
+|       inst                |     0.021 |
+|     SPI_MOD               |     0.005 |
+|       axi_spi             |     0.005 |
+|     clk_wiz_0             |     0.155 |
+|       inst                |     0.155 |
+|     only_rx_0             |     0.581 |
+|       inst                |     0.581 |
+|     only_tx_0             |     0.069 |
+|       inst                |     0.069 |
+|     vio_0                 |     0.006 |
+|       inst                |     0.006 |
++---------------------------+-----------+
+
+

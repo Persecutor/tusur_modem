@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Jun 18 11:55:12 2025
+# Process ID: 9472
+# Current directory: F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_3_0_synth_1
+# Command line: vivado.exe -log design_1_RAshift16_4_up_3_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_RAshift16_4_up_3_0.tcl
+# Log file: F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_3_0_synth_1/design_1_RAshift16_4_up_3_0.vds
+# Journal file: F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_RAshift16_4_up_3_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_RAshift16_4_up_3_0.tcl -notrace

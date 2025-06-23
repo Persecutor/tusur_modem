@@ -1,0 +1,21 @@
+
+module switch(  
+    // input interface
+    input	[15:0]	iredata_tx,
+    input	[15:0]	iimdata_tx,
+
+    input	[15:0]	iredata_ad,
+   // input	[15:0]	i_im_data_ad,
+  
+    input			switch_on,
+	// output interface
+	output	[15:0]	oredata_rx
+    //output	[15:0]	o_im_data_rx
+
+  
+    );
+	assign o_re_data_rx = (switch_on)? i_re_data_tx:i_re_data_ad;
+	//assign o_im_data_rx = (switch_on)? i_im_data_tx:i_im_data_ad;
+	
+	endmodule
+	

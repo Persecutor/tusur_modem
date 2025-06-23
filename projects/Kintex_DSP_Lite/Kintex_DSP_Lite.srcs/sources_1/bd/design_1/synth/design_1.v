@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Fri Jun 20 12:04:33 2025
+//Date        : Mon Jun 23 11:34:54 2025
 //Host        : TOR00094 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -4444,12 +4444,12 @@ module design_1
   wire [15:0]switch_0_oredata_rx;
   wire sys_200m_clk;
   wire [0:0]up_txnrx_1;
-  wire [3:0]vio_0_probe_out0;
-  wire [2:0]vio_0_probe_out1;
-  wire [13:0]vio_0_probe_out2;
-  wire [23:0]vio_0_probe_out3;
-  wire [0:0]vio_0_probe_out4;
-  wire [0:0]vio_0_probe_out5;
+  wire [13:0]vio_addr_shift;
+  wire [2:0]vio_m_in;
+  wire [0:0]vio_rst_rx;
+  wire [3:0]vio_ss_in;
+  wire [0:0]vio_switch_tx_ad;
+  wire [23:0]vio_trh_lvl;
   wire [15:0]xlconstant_0_dout;
   wire [15:0]xlconstant_1_dout;
   wire [7:0]xlconstant_3_dout;
@@ -4460,7 +4460,7 @@ module design_1
   assign AXI_TX_CLK_IN_1 = AXI_TX_CLK_IN;
   assign AXI_TX_DATA_IN_1 = AXI_TX_DATA_IN[16:0];
   assign FPGA_REF_40MHZ_1 = FPGA_REF_40MHZ;
-  assign LED1[0] = vio_0_probe_out4;
+  assign LED1[0] = vio_rst_rx;
   assign LED2[0] = only_rx_0_corr_pr_detect;
   assign LED3[0] = only_rx_0_DeFec_err_dtct;
   assign PIN_0 = only_rx_0_decrc_verr;
@@ -5045,7 +5045,7 @@ module design_1
        (.DeFec_err_dtct(only_rx_0_DeFec_err_dtct),
         .N_err(only_rx_0_N_err),
         .N_sop_detect(only_rx_0_N_sop_detect),
-        .addr_shft(vio_0_probe_out2),
+        .addr_shft(vio_addr_shift),
         .clk_h(clk_wiz_0_clk_out1),
         .clk_hh(clk_wiz_0_clk_out2),
         .clk_l(AD9361_CTRL_clk_out1),
@@ -5054,8 +5054,8 @@ module design_1
         .decrc_verr(only_rx_0_decrc_verr),
         .m_axis_aclk(clk_wiz_0_clk_out2),
         .m_axis_tready(1'b1),
-        .m_in(vio_0_probe_out1),
-        .rst(vio_0_probe_out4),
+        .m_in(vio_m_in),
+        .rst(vio_rst_rx),
         .rx_i_axis_aclk(AD9361_CTRL_clk_out1),
         .rx_i_axis_tdata(switch_0_oredata_rx),
         .rx_i_axis_tvalid(1'b0),
@@ -5063,20 +5063,20 @@ module design_1
         .rx_q_axis_aclk(AD9361_CTRL_clk_out1),
         .rx_q_axis_tdata(switch_0_oimdata_rx),
         .rx_q_axis_tvalid(1'b0),
-        .ss_in(vio_0_probe_out0),
-        .thr_lvl(vio_0_probe_out3),
+        .ss_in(vio_ss_in),
+        .thr_lvl(vio_trh_lvl),
         .thr_lvl_auto(only_rx_0_thr_lvl_auto));
   design_1_only_tx_0_0 only_tx_0
        (.clk_h(clk_wiz_0_clk_out1),
         .clk_l(AD9361_CTRL_clk_out1),
-        .m_in(vio_0_probe_out1),
+        .m_in(vio_m_in),
         .rst(Net),
         .s_axis_aclk(AD9361_CTRL_clk_out1),
         .s_axis_tdata(xlconstant_3_dout),
         .s_axis_tlast(xlconstant_4_dout),
         .s_axis_tuser(xlconstant_4_dout),
         .s_axis_tvalid(xlconstant_4_dout),
-        .ss_in(vio_0_probe_out0),
+        .ss_in(vio_ss_in),
         .tx_i_axis_aclk(AD9361_CTRL_clk_out1),
         .tx_i_axis_tdata(only_tx_0_osub_i),
         .tx_i_axis_tready(1'b1),
@@ -5090,18 +5090,18 @@ module design_1
         .iredata_tx(only_tx_0_osub_i),
         .oimdata_rx(switch_0_oimdata_rx),
         .oredata_rx(switch_0_oredata_rx),
-        .switch_on(vio_0_probe_out5));
+        .switch_on(vio_switch_tx_ad));
   design_1_vio_0_0 vio_0
        (.clk(clk_wiz_0_clk_out1),
         .probe_in0(only_rx_0_N_sop_detect),
         .probe_in1(only_rx_0_N_err),
         .probe_in2(only_rx_0_thr_lvl_auto),
-        .probe_out0(vio_0_probe_out0),
-        .probe_out1(vio_0_probe_out1),
-        .probe_out2(vio_0_probe_out2),
-        .probe_out3(vio_0_probe_out3),
-        .probe_out4(vio_0_probe_out4),
-        .probe_out5(vio_0_probe_out5));
+        .probe_out0(vio_ss_in),
+        .probe_out1(vio_m_in),
+        .probe_out2(vio_addr_shift),
+        .probe_out3(vio_trh_lvl),
+        .probe_out4(vio_rst_rx),
+        .probe_out5(vio_switch_tx_ad));
   design_1_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
   design_1_xlconstant_0_1 xlconstant_1

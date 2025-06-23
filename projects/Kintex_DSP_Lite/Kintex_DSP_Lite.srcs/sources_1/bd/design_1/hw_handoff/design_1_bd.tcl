@@ -1981,13 +1981,13 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.CLKIN1_JITTER_PS {325.52} \
    CONFIG.CLKOUT1_DRIVES {BUFG} \
-   CONFIG.CLKOUT1_JITTER {103.393} \
-   CONFIG.CLKOUT1_PHASE_ERROR {164.595} \
+   CONFIG.CLKOUT1_JITTER {170.079} \
+   CONFIG.CLKOUT1_PHASE_ERROR {194.835} \
    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {184.320} \
    CONFIG.CLKOUT2_DRIVES {BUFG} \
-   CONFIG.CLKOUT2_JITTER {102.318} \
-   CONFIG.CLKOUT2_PHASE_ERROR {164.595} \
-   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200} \
+   CONFIG.CLKOUT2_JITTER {160.853} \
+   CONFIG.CLKOUT2_PHASE_ERROR {194.835} \
+   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {276.48} \
    CONFIG.CLKOUT2_USED {true} \
    CONFIG.CLKOUT3_DRIVES {BUFG} \
    CONFIG.CLKOUT4_DRIVES {BUFG} \
@@ -1995,11 +1995,11 @@ proc create_root_design { parentCell } {
    CONFIG.CLKOUT6_DRIVES {BUFG} \
    CONFIG.CLKOUT7_DRIVES {BUFG} \
    CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {60} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {36} \
    CONFIG.MMCM_CLKIN1_PERIOD {32.552} \
    CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {10} \
-   CONFIG.MMCM_CLKOUT1_DIVIDE {9} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {6} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {4} \
    CONFIG.MMCM_COMPENSATION {ZHOLD} \
    CONFIG.MMCM_DIVCLK_DIVIDE {1} \
    CONFIG.NUM_OUT_CLKS {2} \
@@ -2228,12 +2228,12 @@ proc create_root_design { parentCell } {
   connect_bd_net -net switch_0_oredata_rx [get_bd_pins only_rx_0/rx_i_axis_tdata] [get_bd_pins switch_0/oredata_rx]
   connect_bd_net -net sys_200m_clk [get_bd_pins AD9361_CTRL/delay_clk] [get_bd_pins AD9364/delay_clk] [get_bd_pins AXI_Peripheral/idelay_ref_clk] [get_bd_pins CLK_AXI/delay_clk]
   connect_bd_net -net up_txnrx_1 [get_bd_pins AD9361_CTRL/dout] [get_bd_pins AD9364/up_enable] [get_bd_pins AD9364/up_txnrx]
-  connect_bd_net -net vio_0_probe_out0 [get_bd_pins only_rx_0/ss_in] [get_bd_pins only_tx_0/ss_in] [get_bd_pins vio_0/probe_out0]
-  connect_bd_net -net vio_0_probe_out1 [get_bd_pins only_rx_0/m_in] [get_bd_pins only_tx_0/m_in] [get_bd_pins vio_0/probe_out1]
-  connect_bd_net -net vio_0_probe_out2 [get_bd_pins only_rx_0/addr_shft] [get_bd_pins vio_0/probe_out2]
-  connect_bd_net -net vio_0_probe_out3 [get_bd_pins only_rx_0/thr_lvl] [get_bd_pins vio_0/probe_out3]
-  connect_bd_net -net vio_0_probe_out4 [get_bd_ports LED1] [get_bd_pins only_rx_0/rst] [get_bd_pins vio_0/probe_out4]
-  connect_bd_net -net vio_0_probe_out5 [get_bd_pins switch_0/switch_on] [get_bd_pins vio_0/probe_out5]
+  connect_bd_net -net vio_addr_shift [get_bd_pins only_rx_0/addr_shft] [get_bd_pins vio_0/probe_out2]
+  connect_bd_net -net vio_m_in [get_bd_pins only_rx_0/m_in] [get_bd_pins only_tx_0/m_in] [get_bd_pins vio_0/probe_out1]
+  connect_bd_net -net vio_rst_rx [get_bd_ports LED1] [get_bd_pins only_rx_0/rst] [get_bd_pins vio_0/probe_out4]
+  connect_bd_net -net vio_ss_in [get_bd_pins only_rx_0/ss_in] [get_bd_pins only_tx_0/ss_in] [get_bd_pins vio_0/probe_out0]
+  connect_bd_net -net vio_switch_tx_ad [get_bd_pins switch_0/switch_on] [get_bd_pins vio_0/probe_out5]
+  connect_bd_net -net vio_trh_lvl [get_bd_pins only_rx_0/thr_lvl] [get_bd_pins vio_0/probe_out3]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins AXI_Peripheral/fifo_wr_data_0] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins AXI_Peripheral/fifo_wr_data_1] [get_bd_pins xlconstant_1/dout]
   connect_bd_net -net xlconstant_3_dout [get_bd_pins only_tx_0/s_axis_tdata] [get_bd_pins xlconstant_3/dout]

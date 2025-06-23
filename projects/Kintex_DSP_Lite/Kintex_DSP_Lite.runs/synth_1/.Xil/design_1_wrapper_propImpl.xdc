@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/constrs_1/imports/Files_XDC/DSP_Kintex_PM.xdc rfile:../../../Kintex_DSP_Lite.srcs/constrs_1/imports/Files_XDC/DSP_Kintex_PM.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/constrs_1/imports/Files_XDC/DSP_Kintex_PM.xdc rfile:../../../Kintex_DSP_Lite.srcs/constrs_1/imports/Files_XDC/DSP_Kintex_PM.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN K21 IOSTANDARD LVCMOS33} [get_ports PIN_0]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 create_project -in_memory -part xc7k325tffg676-2
@@ -26,102 +26,102 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.cache/wt [current_project]
-set_property parent.project_path F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.xpr [current_project]
+set_property webtalk.parent_dir F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.cache/wt [current_project]
+set_property parent.project_path F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths {
-  f:/work/Izhevsk_project_2/projects/ip_repo/IP_sync_1.0
-  f:/work/Izhevsk_project_2/library
+  f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/ip_repo/IP_sync_1.0
+  f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/library
 } [current_project]
 update_ip_catalog
-set_property ip_output_repo f:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.cache/ip [current_project]
+set_property ip_output_repo f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog {
-  F:/work/Izhevsk_project_2/FPGA/include/parameters.vh
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/define.vh
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_parameters.svh
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_parameters.svh
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/ldpc_parameters.svh
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_functions.svh
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_addr_gen_tab.svh
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/plc_bit_preambule.vh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/include/parameters.vh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/define.vh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_parameters.svh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_parameters.svh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/ldpc_parameters.svh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_functions.svh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_addr_gen_tab.svh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/plc_bit_preambule.vh
 }
-set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_parameters.svh]
-set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_parameters.svh]
-set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/ldpc_parameters.svh]
-set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_functions.svh]
-set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_addr_gen_tab.svh]
+set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_parameters.svh]
+set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_parameters.svh]
+set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/ldpc_parameters.svh]
+set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_functions.svh]
+set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_addr_gen_tab.svh]
 read_verilog -library xil_defaultlib -sv {
-  F:/work/Izhevsk_project_2/FPGA/DeFEC.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/LLR_mux.sv
-  F:/work/Izhevsk_project_2/FPGA/RX_phy.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/S2P_conv_1x8.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/codec_buffer_nD_slogic.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/codec_mem_block.sv
-  F:/work/Izhevsk_project_2/FPGA/Tx/control.sv
-  F:/work/Izhevsk_project_2/FPGA/Rx/control_index_symb.sv
-  F:/work/Izhevsk_project_2/FPGA/Rx/count_err.sv
-  F:/work/Izhevsk_project_2/xcorr/count_sop_dtct.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/deInterleaver.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decoder_CRC.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/deinterl_ram.sv
-  F:/work/Izhevsk_project_2/FPGA/Rx/demapper_ss.sv
-  F:/work/Izhevsk_project_2/FPGA/Rx/demappersv.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/descrambler.sv
-  F:/work/Izhevsk_project_2/FPGA/Rx/equalizer.sv
-  F:/work/Izhevsk_project_2/FPGA/Tx/fftshift.sv
-  F:/work/Izhevsk_project_2/xcorr/filter_sop.sv
-  F:/work/Izhevsk_project_2/xcorr/find_max.sv
-  F:/work/Izhevsk_project_2/FPGA/Tx/ifft.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/FEC/interl_addr_rom.sv
-  F:/work/Izhevsk_project_2/FPGA/Rx/interlayer_rmcp.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_addr_gen.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_cnode.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_cnode_engine.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_ctrl.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_engine.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_engine_sink.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_ibuffer.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_ibuffer_dwc.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_mem.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_source.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_vnode.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_vnode_engine.sv
-  F:/work/Izhevsk_project_2/FPGA/Rx/soft_demod/llr_even_qam_demapper.sv
-  F:/work/Izhevsk_project_2/FPGA/Rx/soft_demod/llr_even_qam_demapper_core.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/pack_finder.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/parallel2series.sv
-  F:/work/Izhevsk_project_2/FPGA/EDM/DeFEC/parallel2series_FIFO.sv
-  F:/work/Izhevsk_project_2/FPGA/prbs/prbs23_check.sv
-  F:/work/Izhevsk_project_2/xcorr/ram.sv
-  F:/work/Izhevsk_project_2/FPGA/Tx/scramb_subcarier.sv
-  {F:/work/Izhevsk_project_2/FPGA/Rx/submodule equalizer/sub_eq_1.sv}
-  F:/work/Izhevsk_project_2/xcorr/xcorr_fft_sub.sv
-  F:/work/Izhevsk_project_2/xcorr/xcorr_ifft_sub.sv
-  F:/work/Izhevsk_project_2/xcorr/xcorr_main.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/DeFEC.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/LLR_mux.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/RX_phy.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/S2P_conv_1x8.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/codec_buffer_nD_slogic.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/codec_mem_block.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/control.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/control_index_symb.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/count_err.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/xcorr/count_sop_dtct.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/deInterleaver.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decoder_CRC.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/deinterl_ram.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/demapper_ss.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/demappersv.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/descrambler.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/equalizer.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/fftshift.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/xcorr/filter_sop.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/xcorr/find_max.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/ifft.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/interl_addr_rom.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/interlayer_rmcp.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_addr_gen.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_cnode.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_cnode_engine.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_ctrl.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_engine.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_engine_sink.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_ibuffer.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_ibuffer_dwc.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_mem.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_source.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_vnode.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_vnode_engine.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/soft_demod/llr_even_qam_demapper.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/soft_demod/llr_even_qam_demapper_core.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/pack_finder.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/parallel2series.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/parallel2series_FIFO.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/prbs/prbs23_check.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/xcorr/ram.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/scramb_subcarier.sv
+  {F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/submodule equalizer/sub_eq_1.sv}
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/xcorr/xcorr_fft_sub.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/xcorr/xcorr_ifft_sub.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/xcorr/xcorr_main.sv
 }
-read_verilog -library xil_defaultlib F:/work/Izhevsk_project_2/FPGA/only_rx.v
-read_ip -quiet F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_4/axis_data_fifo_4.xci
+read_verilog -library xil_defaultlib F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/only_rx.v
+read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_4/axis_data_fifo_4.xci
 
-read_ip -quiet F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_fhy_defec/axis_data_fifo_fhy_defec.xci
+read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_fhy_defec/axis_data_fifo_fhy_defec.xci
 
-read_ip -quiet F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci
+read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci
 
-read_ip -quiet F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_0/div_gen_0.xci
+read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_0/div_gen_0.xci
 
-read_ip -quiet F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/xfft_time_freq.xci
+read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/xfft_time_freq.xci
 
-read_ip -quiet F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/axis_data_fifo_ifft.xci
+read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/axis_data_fifo_ifft.xci
 
-read_ip -quiet F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/ifft_corr_1_1/ifft_corr_1.xci
+read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/ifft_corr_1_1/ifft_corr_1.xci
 
-read_ip -quiet F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/fft_corr_1/fft_corr_1.xci
+read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/fft_corr_1/fft_corr_1.xci
 
-read_ip -quiet F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0.xci
-set_property used_in_implementation false [get_files -all f:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_ooc.xdc]
+read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0.xci
+set_property used_in_implementation false [get_files -all f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -135,7 +135,7 @@ read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-set cached_ip [config_ip_cache -export -no_bom  -dir F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_rx_0_0_synth_1 -new_name design_1_only_rx_0_0 -ip [get_ips design_1_only_rx_0_0]]
+set cached_ip [config_ip_cache -export -no_bom  -dir F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_rx_0_0_synth_1 -new_name design_1_only_rx_0_0 -ip [get_ips design_1_only_rx_0_0]]
 
 if { $cached_ip eq {} } {
 close [open __synthesis_is_running__ w]
@@ -176,32 +176,32 @@ write_checkpoint -force -noxdef design_1_only_rx_0_0.dcp
 create_report "design_1_only_rx_0_0_synth_1_synth_report_utilization_0" "report_utilization -file design_1_only_rx_0_0_utilization_synth.rpt -pb design_1_only_rx_0_0_utilization_synth.pb"
 
 if { [catch {
-  file copy -force F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_rx_0_0_synth_1/design_1_only_rx_0_0.dcp F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0.dcp
+  file copy -force F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_rx_0_0_synth_1/design_1_only_rx_0_0.dcp F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_stub.v
+  write_verilog -force -mode synth_stub F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_stub.vhdl
+  write_vhdl -force -mode synth_stub F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_sim_netlist.v
+  write_verilog -force -mode funcsim F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -211,47 +211,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_rx_0_0_synth_1/design_1_only_rx_0_0.dcp F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0.dcp
+  file copy -force F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_rx_0_0_synth_1/design_1_only_rx_0_0.dcp F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_rx_0_0_synth_1/design_1_only_rx_0_0_stub.v F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_stub.v
+  file rename -force F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_rx_0_0_synth_1/design_1_only_rx_0_0_stub.v F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_rx_0_0_synth_1/design_1_only_rx_0_0_stub.vhdl F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_stub.vhdl
+  file rename -force F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_rx_0_0_synth_1/design_1_only_rx_0_0_stub.vhdl F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_rx_0_0_synth_1/design_1_only_rx_0_0_sim_netlist.v F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_sim_netlist.v
+  file rename -force F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_rx_0_0_synth_1/design_1_only_rx_0_0_sim_netlist.v F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_rx_0_0_synth_1/design_1_only_rx_0_0_sim_netlist.vhdl F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_sim_netlist.vhdl
+  file rename -force F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_rx_0_0_synth_1/design_1_only_rx_0_0_sim_netlist.vhdl F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cached_ip 
 
-if {[file isdir F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.ip_user_files/ip/design_1_only_rx_0_0]} {
+if {[file isdir F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.ip_user_files/ip/design_1_only_rx_0_0]} {
   catch { 
-    file copy -force F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_stub.v F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.ip_user_files/ip/design_1_only_rx_0_0
+    file copy -force F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_stub.v F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.ip_user_files/ip/design_1_only_rx_0_0
   }
 }
 
-if {[file isdir F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.ip_user_files/ip/design_1_only_rx_0_0]} {
+if {[file isdir F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.ip_user_files/ip/design_1_only_rx_0_0]} {
   catch { 
-    file copy -force F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_stub.vhdl F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.ip_user_files/ip/design_1_only_rx_0_0
+    file copy -force F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_stub.vhdl F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.ip_user_files/ip/design_1_only_rx_0_0
   }
 }
 file delete __synthesis_is_running__

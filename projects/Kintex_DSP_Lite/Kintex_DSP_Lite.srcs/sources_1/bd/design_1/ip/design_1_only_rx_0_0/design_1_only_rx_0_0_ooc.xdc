@@ -52,7 +52,7 @@
 # #########################################################
 
 
-create_clock -period 4.883 -name m_axis_aclk [get_ports m_axis_aclk]
+create_clock -period 3.391 -name m_axis_aclk [get_ports m_axis_aclk]
 
 create_clock -period 32.552 -name rx_i_axis_aclk [get_ports rx_i_axis_aclk]
 

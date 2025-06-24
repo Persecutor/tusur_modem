@@ -231,7 +231,7 @@ assign LLR_temp[7] = LLR_mux_obit[4];
   assign dec__itag = '0;
   assign dec__ifmode = '1;
   assign iclkena  = '1;
-  assign dec__iNiter = 10;
+  assign dec__iNiter = 5;
 
 //--------------------------------------------------------------------------------------
 //

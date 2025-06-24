@@ -273,13 +273,13 @@ preplace netloc switch_0_oimdata_rx 1 6 1 8330 2690n
 preplace netloc vio_switch_tx_ad 1 5 3 6330 3580 NJ 3580 9260
 preplace netloc only_rx_0_decrc_oerr 1 7 1 9740 3050n
 preplace netloc only_rx_0_decrc_verr 1 7 1 N 3090
-preplace netloc AXI_Peripheral_M00_AXI 1 4 1 2890 160n
-preplace netloc AXI_Peripheral_M03_AXI 1 4 1 2780 220n
+preplace netloc AXI_Peripheral_M06_AXI 1 4 1 2920 260n
 preplace netloc AXI_Peripheral_M14_AXI 1 4 1 2720 280n
 preplace netloc AXI_Peripheral_M04_AXI 1 4 1 2940 240n
+preplace netloc AXI_Peripheral_M00_AXI 1 4 1 2890 160n
 preplace netloc AXI_Peripheral_M02_AXI 1 4 1 2880 200n
-preplace netloc AXI_Peripheral_M06_AXI 1 4 1 2920 260n
 preplace netloc AXI_Peripheral_M01_AXI 1 4 1 2910 180n
+preplace netloc AXI_Peripheral_M03_AXI 1 4 1 2780 220n
 levelinfo -pg 1 -130 620 1090 1370 2230 5855 8163 9053 9930
 pagesize -pg 1 -db -bbox -sgen -340 -4680 10150 10560
 "

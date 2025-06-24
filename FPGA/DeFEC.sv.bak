@@ -291,8 +291,8 @@ assign m_axis_tready  = par2ser_oreq;
     logic       decrc_oval;
     logic       decrc_osop;
     logic       decrc_oeop;
-    (* mark_debug = "true" *) logic       decrc_oerr;
-    logic       decrc_verr;
+    //(* mark_debug = "true" *) logic       decrc_oerr;
+    //logic       decrc_verr;
 
     assign decrc_ival = par2ser_oval; // idat[7] - sop
     assign decrc_idat = par2ser_obit;

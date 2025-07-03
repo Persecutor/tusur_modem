@@ -61,6 +61,7 @@ module design_1_only_rx_0_0 (
   rst,
   ss_in,
   m_in,
+  bw_in,
   thr_lvl,
   rx_i_axis_tdata,
   rx_i_axis_tvalid,
@@ -95,6 +96,7 @@ input wire clk_hh;
 input wire rst;
 input wire [3 : 0] ss_in;
 input wire [2 : 0] m_in;
+input wire [2 : 0] bw_in;
 input wire [23 : 0] thr_lvl;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 rx_i_axis TDATA" *)
 input wire [15 : 0] rx_i_axis_tdata;
@@ -149,6 +151,7 @@ input wire rx_q_axis_aclk;
     .rst(rst),
     .ss_in(ss_in),
     .m_in(m_in),
+    .bw_in(bw_in),
     .thr_lvl(thr_lvl),
     .rx_i_axis_tdata(rx_i_axis_tdata),
     .rx_i_axis_tvalid(rx_i_axis_tvalid),

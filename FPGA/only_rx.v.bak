@@ -20,6 +20,8 @@ module only_rx #(
 	input 			[13:0]										addr_shft,
 	output     													corr_pr_detect,
 	output                                                      DeFec_err_dtct,
+	output                                                      decrc_oerr,
+	output                                                      decrc_verr,
 	output                                                      rx_ocorr_dtct,
 
 
@@ -81,7 +83,7 @@ axis_data_fifo_fhy_defec axis_data_fifo_fhy_defec_sub (
 
 wire	[7:0]		m_axis_tdata_l;
 wire				m_axis_tvalid_l;
-wire				decrc_oerr;
+//wire				decrc_oerr;
  DeFEC DeFEC_sub(
     	.clk			(clk_hh),
     	.rst			(rst),
@@ -92,6 +94,7 @@ wire				decrc_oerr;
     	.oval			(m_axis_tvalid_l),
     	.odat			(m_axis_tdata_l),
 		.err_dtct       (DeFec_err_dtct),
+		.decrc_verr     (decrc_verr),
 		.decrc_oerr		(decrc_oerr));
 
 

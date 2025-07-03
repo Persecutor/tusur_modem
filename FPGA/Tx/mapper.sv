@@ -31,6 +31,7 @@ module mapper#(parameter maxWordOut = 6)(
 	input                           ready_frame,
 	input           [3:0]           index_ss,
 	input           [2:0]           index_M_in,
+	input logic     [2:0]           index_bw,
     input                           enable,
 
 	output logic    [2:0]           index_M_out,
@@ -60,8 +61,8 @@ logic [sz_count_p-1:0]          pilot_counter;
 logic [maxWordOut-1:0]      data, 
                             data_low, 
                             data_low_2;
-
-logic [1:0]     map_i   [fftsize - 1:0];
+logic [1:0]     map_i;
+logic [13:0]    map_data   [fftsize - 1:0];
 logic [1:0]     map_p   [fftsize - 1:0];
 logic           pilot   [n_pilot-1:0];
 logic           pream_i [pream_size-1:0];
@@ -71,12 +72,14 @@ logic [1:0]		loc_index;
 logic			loc_oreq;
 
 
+
 logic   next_symb, now_count,prev_count;
 reg     local_bit, local_val;
 
+
 initial begin
 
-    $readmemb(file_map_symb,    map_i);
+    $readmemb(file_map_symb,    map_data);
     $readmemb(file_map_pream,   map_p);
     $readmemb(file_pilot,       pilot);
     $readmemb(file_t_pream_i,   pream_i);
@@ -102,6 +105,24 @@ end
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Данные на выходе в зависимости от Карты
+
+always_comb begin
+	if(rst)
+		map_i = '0;
+	else if (symb_counter < fftsize)
+	begin
+		case (index_bw)
+			3'd0: map_i = map_data[symb_counter][1:0];
+			3'd1: map_i = map_data[symb_counter][3:2];
+			3'd2: map_i = map_data[symb_counter][5:4];
+			3'd3: map_i = map_data[symb_counter][7:6];
+			3'd4: map_i = map_data[symb_counter][9:8];
+			3'd5: map_i = map_data[symb_counter][11:10];
+			3'd6: map_i = map_data[symb_counter][13:12];
+		endcase
+	end else  map_i = '0;  
+end
+
 
 always_comb begin
 	if(rst)
@@ -189,7 +210,7 @@ always @(posedge clk) begin
     else begin
         if(symb_counter < fftsize)
 		    // loc_index <= frame_counter > N_pream - 1 ? map_i[symb_counter] : (frame_counter > 0 ? '0 : map_p[symb_counter]);
-			loc_index <= frame_counter > N_pream - 1 ? map_i[symb_counter] :  map_p[symb_counter];
+			loc_index <= frame_counter > N_pream - 1 ? map_i :  map_p[symb_counter];
         else 
 		    loc_index <= '0;
 
@@ -203,15 +224,15 @@ end
 
 // assign oreq = ready_frame && frame_counter > N_pream - 1 && symb_counter < fftsize && next_symb && map_i[symb_counter] == 2'd1 && ss_counter == 5'd0 ? 1'd1 : loc_oreq;
 
-assign oreq = ready_frame && frame_counter > N_pream - 1 && symb_counter < fftsize && next_symb && map_i[symb_counter] == 2'd1 && ss_counter == 5'd0 ? 1'd1 : '0;
+assign oreq = ready_frame && frame_counter > N_pream - 1 && symb_counter < fftsize && next_symb && map_i == 2'd1 && ss_counter == 5'd0 ? 1'd1 : '0;
 
 
 always @(posedge clk_h) begin
 	if(rst)
         loc_oreq <= '0;
-    else if(ready_frame && frame_counter > N_pream - 1 && next_symb && map_i[symb_counter] == 2'd1 && ss_counter == 5'd0)
+    else if(ready_frame && frame_counter > N_pream - 1 && next_symb && map_i == 2'd1 && ss_counter == 5'd0)
         loc_oreq <= '1;
-    else if(ival || (oreq && map_i[symb_counter] != 2'd1))
+    else if(ival || (oreq && map_i != 2'd1))
         loc_oreq <= '0;
     else
         loc_oreq <= loc_oreq;
@@ -307,7 +328,7 @@ end
 always @(posedge clk) begin 
     if(rst)
         ss_counter <= '0;
-    else if(map_i[symb_counter] == 2'd1)
+    else if(map_i == 2'd1)
         if(ss_counter == index_ss - 1)
             ss_counter <= '0;
         else 

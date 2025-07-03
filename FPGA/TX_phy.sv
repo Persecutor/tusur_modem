@@ -4,6 +4,7 @@ module TX_phy(
 		input							rst,
 		input 			[3:0]			ss_in,
 		input 			[2:0]			m_in,
+		input           [2:0]           bw_in,
 
 		input							s_ax_ibit,
 		input							s_ax_ival,
@@ -25,7 +26,7 @@ localparam pLLR_W			= 5  ;
 //							Блок управления								
 //----------------------------------------------------------------------//
 
-wire [2:0]		m_control_rx, m_control_tx;
+wire [2:0]		m_control_rx, m_control_tx, bw_control_tx, bw_control_rx;
 wire [3:0]		ss_control_rx, ss_control_tx;
 
 wire			mapper_osof;
@@ -41,11 +42,15 @@ control_sub(
 		.sof_rx			()	,
 		.index_M		(m_in)			,
 		.index_SS		(ss_in)			,
+		.index_BW       (bw_in),
 		.oindex_M_rx	()	,
 		.oindex_SS_rx	()	,
+		.oindex_BW_rx	()	,
 		.oindex_M_tx	(m_control_tx)	,
 		.oindex_SS_tx	(ss_control_tx)	,
+	    .oindex_BW_tx	(bw_control_tx)	,
 		.del_rst		(del_rst));
+
 
 
 //----------------------------------------------------------------------//
@@ -91,6 +96,7 @@ mapper_sub(
 		.ibit				(s2p_obit)			,
 		.ready_frame		(1'd1)				,
 		.enable				(1'd1)				,
+		.index_bw           (bw_control_tx)     ,
 		.index_ss			(ss_control_tx)		,  
 		.index_M_in			(m_control_tx)		,
 		.index_M_out		(mapper_index_M)	,

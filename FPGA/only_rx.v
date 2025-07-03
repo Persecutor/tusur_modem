@@ -9,6 +9,7 @@ module only_rx #(
 
 	input 			[3:0]										ss_in,
 	input 			[2:0]										m_in,
+	input           [2:0]                                       bw_in,
 	input			[23:0]										thr_lvl,
 
 	input			[15:0]										rx_i_axis_tdata,
@@ -56,6 +57,7 @@ RX_phy_sub(
 		.rst				(rst),
 		.ss_in				(ss_in),
 		.m_in				(m_in),
+		.bw_in				(bw_in),
 		.thr_lvl			(thr_lvl),
 		.addr_shft			(addr_shft),
 		.n_sps				(N_sop_detect),

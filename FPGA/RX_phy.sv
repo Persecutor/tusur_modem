@@ -5,6 +5,7 @@ module RX_phy(
 		input							rst,
 		input 			[3:0]			ss_in,
 		input 			[2:0]			m_in,
+		input           [2:0]           bw_in,
 		input			[23:0]			thr_lvl,
 		input 			[13:0]			addr_shft,
 
@@ -29,7 +30,7 @@ localparam pLLR_W			= 5  ;
 //							Блок управления								
 //----------------------------------------------------------------------//
 
-wire [2:0]		m_control_rx, m_control_tx;
+wire [2:0]		m_control_rx, m_control_tx,bw_control_rx;
 wire [3:0]		ss_control_rx, ss_control_tx;
 
 wire			demapper_osof;
@@ -44,10 +45,13 @@ control_sub(
 		.sof_rx			(demapper_osof)	,
 		.index_M		(m_in)			,
 		.index_SS		(ss_in)			,
+		.index_BW       (bw_in),
 		.oindex_M_rx	(m_control_rx)	,
 		.oindex_SS_rx	(ss_control_rx)	,
+	    .oindex_BW_rx	(bw_control_rx)	,
 		.oindex_M_tx	()	,
 		.oindex_SS_tx	()	,
+		.oindex_BW_tx	()	,
 		.del_rst		(del_rst));
 
 //----------------------------------------------------------------------//
@@ -214,9 +218,11 @@ demapper (
 		.enable         (1)						,
 		.index_ss       (ss_control_rx)			,
 		.index_M_in     (m_control_rx)			,
+	    .index_bw       (bw_control_rx)         ,
 		.frame_counter	(fft_frame_count),
 		.index_M_out    (demapper_index_m)		,
 		.index_SS_out   (demapper_index_ss)		,
+		.index_bw_out   ()                      ,
 		.oindex_subc    (demapper_index_subc)	,
 		.osubc_i        (demap_subc_i)			,
 		.osubc_q        (demap_subc_q)			,

@@ -7,6 +7,7 @@ module only_tx#(
 
 	input		[3:0]			ss_in,
 	input		[2:0]			m_in,
+	input       [2:0]           bw_in,
 	input		[7:0]			s_axis_tdata,
 	input						s_axis_tvalid,
 	input						s_axis_tlast,
@@ -112,6 +113,7 @@ TX_phy_sub(
 	.rst			(rst),
 	.ss_in			(ss_in),
 	.m_in			(m_in),
+	.bw_in          (bw_in),
 	.s_ax_ibit		(phy_fec_dat),
 	.s_ax_ival		(phy_fec_val),
 	.s_ax_oreq		(phy_fec_req),

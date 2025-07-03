@@ -61,6 +61,7 @@ module design_1_only_tx_0_0 (
   rst,
   ss_in,
   m_in,
+  bw_in,
   s_axis_tdata,
   s_axis_tvalid,
   s_axis_tlast,
@@ -84,6 +85,7 @@ input wire clk_h;
 input wire rst;
 input wire [3 : 0] ss_in;
 input wire [2 : 0] m_in;
+input wire [2 : 0] bw_in;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TDATA" *)
 input wire [7 : 0] s_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis TVALID" *)
@@ -127,6 +129,7 @@ input wire tx_q_axis_tready;
     .rst(rst),
     .ss_in(ss_in),
     .m_in(m_in),
+    .bw_in(bw_in),
     .s_axis_tdata(s_axis_tdata),
     .s_axis_tvalid(s_axis_tvalid),
     .s_axis_tlast(s_axis_tlast),

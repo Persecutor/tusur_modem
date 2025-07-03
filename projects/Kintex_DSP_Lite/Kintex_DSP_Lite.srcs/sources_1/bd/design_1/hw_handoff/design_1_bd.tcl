@@ -2048,13 +2048,14 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_EN_PROBE_IN_ACTIVITY {0} \
    CONFIG.C_NUM_PROBE_IN {3} \
-   CONFIG.C_NUM_PROBE_OUT {6} \
+   CONFIG.C_NUM_PROBE_OUT {8} \
    CONFIG.C_PROBE_OUT0_INIT_VAL {0x1} \
    CONFIG.C_PROBE_OUT0_WIDTH {4} \
    CONFIG.C_PROBE_OUT1_INIT_VAL {0x2} \
    CONFIG.C_PROBE_OUT1_WIDTH {3} \
    CONFIG.C_PROBE_OUT2_WIDTH {14} \
    CONFIG.C_PROBE_OUT3_WIDTH {24} \
+   CONFIG.C_PROBE_OUT6_WIDTH {3} \
  ] $vio_0
 
   # Create instance: xlconstant_0, and set properties
@@ -2160,7 +2161,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net Decoder_SPI_0_num_cs_2 [get_bd_ports ad9361_SPI_CS_3] [get_bd_pins SPI_MOD/ad9361_SPI_CS_3]
   connect_bd_net -net Decoder_SPI_0_num_cs_3 [get_bd_ports ad9364_SPI_CS] [get_bd_pins SPI_MOD/ad9364_SPI_CS]
   connect_bd_net -net FPGA_REF_40MHZ_1 [get_bd_ports FPGA_REF_40MHZ] [get_bd_pins CLK_AXI/FPGA_REF_40MHZ]
-  connect_bd_net -net Net [get_bd_pins clk_wiz_0/resetn] [get_bd_pins only_tx_0/rst] [get_bd_pins xlconstant_2/dout]
+  connect_bd_net -net Net [get_bd_pins clk_wiz_0/resetn] [get_bd_pins xlconstant_2/dout]
   connect_bd_net -net SPI_MOD_ip2intc_irpt [get_bd_pins AXI_Peripheral/In0] [get_bd_pins SPI_MOD/ip2intc_irpt]
   connect_bd_net -net ad9361_1_P1_N_1 [get_bd_ports ad9361_1_P1_N] [get_bd_pins AD9361_CTRL/ad9361_1_P1_N]
   connect_bd_net -net ad9361_1_P1_P_1 [get_bd_ports ad9361_1_P1_P] [get_bd_pins AD9361_CTRL/ad9361_1_P1_P]
@@ -2229,11 +2230,13 @@ proc create_root_design { parentCell } {
   connect_bd_net -net sys_200m_clk [get_bd_pins AD9361_CTRL/delay_clk] [get_bd_pins AD9364/delay_clk] [get_bd_pins AXI_Peripheral/idelay_ref_clk] [get_bd_pins CLK_AXI/delay_clk]
   connect_bd_net -net up_txnrx_1 [get_bd_pins AD9361_CTRL/dout] [get_bd_pins AD9364/up_enable] [get_bd_pins AD9364/up_txnrx]
   connect_bd_net -net vio_addr_shift [get_bd_pins only_rx_0/addr_shft] [get_bd_pins vio_0/probe_out2]
+  connect_bd_net -net vio_bw [get_bd_pins only_rx_0/bw_in] [get_bd_pins only_tx_0/bw_in] [get_bd_pins vio_0/probe_out6]
   connect_bd_net -net vio_m_in [get_bd_pins only_rx_0/m_in] [get_bd_pins only_tx_0/m_in] [get_bd_pins vio_0/probe_out1]
   connect_bd_net -net vio_rst_rx [get_bd_ports LED1] [get_bd_pins only_rx_0/rst] [get_bd_pins vio_0/probe_out4]
   connect_bd_net -net vio_ss_in [get_bd_pins only_rx_0/ss_in] [get_bd_pins only_tx_0/ss_in] [get_bd_pins vio_0/probe_out0]
   connect_bd_net -net vio_switch_tx_ad [get_bd_pins switch_0/switch_on] [get_bd_pins vio_0/probe_out5]
   connect_bd_net -net vio_trh_lvl [get_bd_pins only_rx_0/thr_lvl] [get_bd_pins vio_0/probe_out3]
+  connect_bd_net -net vio_tx_rst [get_bd_pins only_tx_0/rst] [get_bd_pins vio_0/probe_out7]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins AXI_Peripheral/fifo_wr_data_0] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins AXI_Peripheral/fifo_wr_data_1] [get_bd_pins xlconstant_1/dout]
   connect_bd_net -net xlconstant_3_dout [get_bd_pins only_tx_0/s_axis_tdata] [get_bd_pins xlconstant_3/dout]

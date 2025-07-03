@@ -5,10 +5,8 @@ Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "F:/work/Izhevsk_project_2/FPGA/test/transmitter.v" Line 1. Module transmitter doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.transmitter
 Compiling module xil_defaultlib.Modem_tb
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot Modem_tb_behav

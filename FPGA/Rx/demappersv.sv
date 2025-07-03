@@ -11,12 +11,14 @@ parameter 	maxWordOut 	= 6,
 	input			[fft_depth-1:0]		subc_q,
 	input           [3:0]				index_ss,  // 0 - Нет расширения  //1 - расширение 2  //3 - расширение 4
 	input           [2:0]				index_M_in,
+	input logic     [2:0]               index_bw,
 	input								enable,
 
 	input 		 	[6:0] 				frame_counter,
 
 	output logic	[3:0]				index_SS_out,
 	output logic	[2:0]				index_M_out,
+	output logic	[2:0]				index_bw_out,
 	output logic	[1:0]				oindex_subc,
 	output logic	[fft_depth-1:0]			osubc_i,
 	output logic	[fft_depth-1:0]			osubc_q,
@@ -43,8 +45,8 @@ logic 	[sz_count-1:0]		symb_counter;
 logic	[fft_depth-1:0]		subc_i_loc,	subc_q_loc, subc_i_loc1, subc_q_loc1, subc_i_loc2, subc_q_loc2, subc_i_loc3, subc_q_loc3;
 
 
-
-logic [1:0]		map_i		[0:fftsize-1];
+logic [13:0]    map_data   [fftsize - 1:0];
+logic [1:0]     map_i;
 logic [1:0]		map_p		[0:fftsize-1];
 
 logic [1:0]		oindex_loc;
@@ -52,7 +54,7 @@ logic			eop, loc_val;
 
 initial begin
 
-	$readmemb(file_map_symb,    map_i);
+	$readmemb(file_map_symb,    map_data);
 	$readmemb(file_map_pream,   map_p);
 
 
@@ -61,6 +63,24 @@ initial begin
 	osop		<= '0;
 	index_M_out 	<= '0;
 	loc_val		<= '0;
+end
+////////////////////////////////////////////////////////////////// code
+
+always_comb begin
+	if(rst)
+		map_i = '0;
+	else if (symb_counter < fftsize)
+	begin
+		case (index_bw)
+			3'd0: map_i = map_data[symb_counter][1:0];
+			3'd1: map_i = map_data[symb_counter][3:2];
+			3'd2: map_i = map_data[symb_counter][5:4];
+			3'd3: map_i = map_data[symb_counter][7:6];
+			3'd4: map_i = map_data[symb_counter][9:8];
+			3'd5: map_i = map_data[symb_counter][11:10];
+			3'd6: map_i = map_data[symb_counter][13:12];
+		endcase
+	end else  map_i = '0;  
 end
 
 always @(posedge clk) osop <= isop;
@@ -77,6 +97,7 @@ always @(posedge clk) begin
 		subc_q_loc 	<= '0;
 		oval 		<= '0;
 		index_M_out 	<= '0;
+		index_bw_out    <= '0;
 		index_SS_out	<= '0;
 		oindex_subc 	<= '0;
 	end
@@ -86,12 +107,14 @@ always @(posedge clk) begin
 		oval			<= '1;
 		index_M_out 	<= index_M_in;
 		index_SS_out	<= index_ss;
-		oindex_subc 	<= frame_counter > N_pream - 1 ? map_i[symb_counter] : map_p[symb_counter];
+		index_bw_out    <= index_bw;
+		oindex_subc 	<= frame_counter > N_pream - 1 ? map_i: map_p[symb_counter];
 	end
 	else begin
 		subc_i_loc 	<= '0;
 		subc_q_loc 	<= '0;
 		oval 		<= '0;
+		index_bw_out    <= '0;
 		index_M_out 	<= '0;
 		index_SS_out	<= '0;
 		oindex_subc 	<= '0;

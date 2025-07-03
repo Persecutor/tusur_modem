@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Tue Jun 24 10:57:24 2025
+//Date        : Wed Jul  2 11:50:33 2025
 //Host        : TOR00094 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -4445,11 +4445,13 @@ module design_1
   wire sys_200m_clk;
   wire [0:0]up_txnrx_1;
   wire [13:0]vio_addr_shift;
+  wire [2:0]vio_bw;
   wire [2:0]vio_m_in;
   wire [0:0]vio_rst_rx;
   wire [3:0]vio_ss_in;
   wire [0:0]vio_switch_tx_ad;
   wire [23:0]vio_trh_lvl;
+  wire [0:0]vio_tx_rst;
   wire [15:0]xlconstant_0_dout;
   wire [15:0]xlconstant_1_dout;
   wire [7:0]xlconstant_3_dout;
@@ -5046,6 +5048,7 @@ module design_1
         .N_err(only_rx_0_N_err),
         .N_sop_detect(only_rx_0_N_sop_detect),
         .addr_shft(vio_addr_shift),
+        .bw_in(vio_bw),
         .clk_h(clk_wiz_0_clk_out1),
         .clk_hh(clk_wiz_0_clk_out2),
         .clk_l(AD9361_CTRL_clk_out1),
@@ -5067,10 +5070,11 @@ module design_1
         .thr_lvl(vio_trh_lvl),
         .thr_lvl_auto(only_rx_0_thr_lvl_auto));
   design_1_only_tx_0_0 only_tx_0
-       (.clk_h(clk_wiz_0_clk_out1),
+       (.bw_in(vio_bw),
+        .clk_h(clk_wiz_0_clk_out1),
         .clk_l(AD9361_CTRL_clk_out1),
         .m_in(vio_m_in),
-        .rst(Net),
+        .rst(vio_tx_rst),
         .s_axis_aclk(AD9361_CTRL_clk_out1),
         .s_axis_tdata(xlconstant_3_dout),
         .s_axis_tlast(xlconstant_4_dout),
@@ -5101,7 +5105,9 @@ module design_1
         .probe_out2(vio_addr_shift),
         .probe_out3(vio_trh_lvl),
         .probe_out4(vio_rst_rx),
-        .probe_out5(vio_switch_tx_ad));
+        .probe_out5(vio_switch_tx_ad),
+        .probe_out6(vio_bw),
+        .probe_out7(vio_tx_rst));
   design_1_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
   design_1_xlconstant_0_1 xlconstant_1

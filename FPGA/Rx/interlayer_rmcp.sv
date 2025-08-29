@@ -28,8 +28,8 @@ reg [fft_depth-1:0] 	buff_i, buff_q;
 
 reg						local_val, sop_insert;
 
-assign oval = count_symb > cpsize  && local_val;
-assign osop = count_symb == cpsize + 1;
+assign oval = count_symb > cpsize - 1  && local_val;
+assign osop = count_symb == cpsize + 1 -1;
 
 
 
@@ -64,17 +64,17 @@ end
 always @(posedge clk) begin
 	if(rst) begin
 		count_symb 		<= '0;
-		count_frame 	<= '0;
+		count_frame 	<= 2;
 	end
 	else if((count_symb == 0 || count_symb == framesize - 1 ) & (isop || sop_insert)) begin
 		count_symb 		<= delay_sop;
-		count_frame		<= '0;
+		count_frame		<= 2;
 	end
 	else if(local_val) begin
 		if(count_symb == framesize - 1) begin
 			count_symb <= '0;
 			if(count_frame == N_symb - 1) begin
-				count_frame <= '0;
+				count_frame <= 2;
 			end
 			else
 				count_frame <= count_frame + 1'd1;

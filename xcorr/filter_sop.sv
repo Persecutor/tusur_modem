@@ -8,14 +8,15 @@ module filter_sop#(parameter N_symb = 50, fftsize = 1024, cpsize = 32)
 
 	output 								osop,
 	output reg signed	[5:0]			delay_sop,
-	output reg							found_sync
+	output reg							found_sync,
+	output								sop_frame
 
 );
 
 
 localparam N_spfr = fftsize + cpsize;
 localparam L_frame = N_symb * N_spfr;
-localparam window_sop = 3; 
+localparam window_sop = 20; 
 localparam left_board = L_frame - window_sop - 1;
 
 
@@ -26,6 +27,7 @@ localparam tshd_check_dw 	= 7;
 
 assign osop = found_sync & count_fr == window_sop + 1;
 
+assign sop_frame = reg_sop_val;
 
 reg		run_count;
 wire	reg_sop_val;

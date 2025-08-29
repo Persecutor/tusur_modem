@@ -317,7 +317,7 @@ assign m_axis_tready  = par2ser_oreq;
 always @(posedge clk or negedge rst) begin
  	if(~rst)
  		err_dtct <= '0;
- 	else if(decrc_verr && decrc_oerr)
+ 	else if(~decrc_verr && decrc_oerr)
  		err_dtct <= '1;
  	else if(decrc_verr && ~decrc_oerr)
 		err_dtct <= '0;

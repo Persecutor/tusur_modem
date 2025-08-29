@@ -45,13 +45,21 @@ read_verilog {
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/ldpc_parameters.svh
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_functions.svh
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_addr_gen_tab.svh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/map_i_band_all.svh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/map_p_band_all.svh
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/plc_bit_preambule.vh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/pream_freq_band_all.svh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/pream_tsync_band_all.svh
 }
 set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_parameters.svh]
 set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_parameters.svh]
 set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/ldpc_parameters.svh]
 set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_functions.svh]
 set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_addr_gen_tab.svh]
+set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/map_i_band_all.svh]
+set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/map_p_band_all.svh]
+set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/pream_freq_band_all.svh]
+set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/pream_tsync_band_all.svh]
 read_verilog -library xil_defaultlib -sv {
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/DeFEC.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/LLR_mux.sv
@@ -73,6 +81,7 @@ read_verilog -library xil_defaultlib -sv {
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/fftshift.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/xcorr/filter_sop.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/xcorr/find_max.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/freq_correct/fr_sync.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/ifft.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/interl_addr_rom.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/interlayer_rmcp.sv
@@ -91,18 +100,26 @@ read_verilog -library xil_defaultlib -sv {
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/decodeLDPC/ldpc_dec_vnode_engine.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/soft_demod/llr_even_qam_demapper.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/soft_demod/llr_even_qam_demapper_core.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/map_i_ram.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/map_p_ram.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/pack_finder.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/parallel2series.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/DeFEC/parallel2series_FIFO.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/freq_correct/prb_fsync_ram.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/xcorr/prb_tsync_ram.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/prbs/prbs23_check.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/xcorr/ram.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/scramb_subcarier.sv
   {F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/submodule equalizer/sub_eq_1.sv}
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Rx/freq_correct/sync_fifo.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/xcorr/xcorr_fft_sub.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/xcorr/xcorr_ifft_sub.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/xcorr/xcorr_main.sv
 }
-read_verilog -library xil_defaultlib F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/only_rx.v
+read_verilog -library xil_defaultlib {
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/speed_test.v
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/only_rx.v
+}
 read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_4/axis_data_fifo_4.xci
 
 read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_fhy_defec/axis_data_fifo_fhy_defec.xci
@@ -115,7 +132,15 @@ read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_D
 
 read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/axis_data_fifo_ifft.xci
 
+read_ip -quiet F:/work/modem_ofdm_0/modem_ofdm/IP_libs/cordic_0/cordic_0.xci
+
+read_ip -quiet F:/work/modem_ofdm_0/modem_ofdm/IP_libs/div_gen_fr_corr/div_gen_fr_corr.xci
+
+read_ip -quiet F:/work/modem_ofdm_0/modem_ofdm/IP_libs/cordic_2/cordic_2.xci
+
 read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/ifft_corr_1_1/ifft_corr_1.xci
+
+read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft_corr/axis_data_fifo_ifft_corr.xci
 
 read_ip -quiet F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/fft_corr_1/fft_corr_1.xci
 

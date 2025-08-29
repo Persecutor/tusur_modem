@@ -33,20 +33,20 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="1"/>
+    <Option Name="WTXSimLaunchSim" Val="2"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="181"/>
-    <Option Name="WTModelSimExportSim" Val="181"/>
-    <Option Name="WTQuestaExportSim" Val="181"/>
-    <Option Name="WTIesExportSim" Val="181"/>
-    <Option Name="WTVcsExportSim" Val="181"/>
-    <Option Name="WTRivieraExportSim" Val="181"/>
-    <Option Name="WTActivehdlExportSim" Val="180"/>
+    <Option Name="WTXSimExportSim" Val="184"/>
+    <Option Name="WTModelSimExportSim" Val="184"/>
+    <Option Name="WTQuestaExportSim" Val="184"/>
+    <Option Name="WTIesExportSim" Val="184"/>
+    <Option Name="WTVcsExportSim" Val="184"/>
+    <Option Name="WTRivieraExportSim" Val="184"/>
+    <Option Name="WTActivehdlExportSim" Val="183"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -237,7 +237,51 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../FPGA/input_data/map_i_band_all.svh">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/map_i_ram.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/input_data/map_p_band_all.svh">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/map_p_ram.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../FPGA/include/parameters.vh">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/input_data/pilot.svh">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/input_data/preamb_q_bit.svh">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/input_data/preamb_i_bit.svh">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -348,6 +392,27 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../../../modem_ofdm_0/modem_ofdm/IP_libs/cordic_0/cordic_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../modem_ofdm_0/modem_ofdm/IP_libs/div_gen_fr_corr/div_gen_fr_corr.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../../../modem_ofdm_0/modem_ofdm/IP_libs/cordic_2/cordic_2.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/ip/ifft_corr_1_1/ifft_corr_1.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -355,7 +420,21 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/ip/axis_data_fifo_ifft_corr/axis_data_fifo_ifft_corr.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/ip/fft_corr_1/fft_corr_1.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/speed_test.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -482,6 +561,13 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../xcorr/find_max.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/Rx/freq_correct/fr_sync.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -663,6 +749,32 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../FPGA/input_data/pream_freq_band_all.svh">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/Rx/freq_correct/prb_fsync_ram.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/input_data/pream_tsync_band_all.svh">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../xcorr/prb_tsync_ram.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../FPGA/prbs/prbs23_check.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -678,6 +790,13 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../FPGA/Rx/submodule equalizer/sub_eq_1.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/Rx/freq_correct/sync_fifo.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -727,35 +846,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_2_1/design_1_RAshift16_4_up_2_1.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_2_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_3_1/design_1_RAshift16_4_up_3_1.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_3_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_0_2/design_1_RAshift16_4_up_0_2.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_0_2"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_1_0/design_1_RAshift16_4_up_1_0.xci">
           <Proxy FileSetName="design_1_RAshift16_4_up_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_0_0/design_1_RAshift16_4_up_0_0.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_FPGA_reset_0/design_1_FPGA_reset_0.xci">
-          <Proxy FileSetName="design_1_FPGA_reset_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_0_1/design_1_RAshift16_4_up_0_1.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_1_2/design_1_RAshift16_4_up_1_2.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_1_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_2_2/design_1_RAshift16_4_up_2_2.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_2_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_3_2/design_1_RAshift16_4_up_3_2.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_3_2"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_2_0/design_1_RAshift16_4_up_2_0.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_2_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_3_0/design_1_RAshift16_4_up_3_0.xci">
           <Proxy FileSetName="design_1_RAshift16_4_up_3_0"/>
@@ -763,35 +858,56 @@
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ibuf_0_0/design_1_ibuf_0_0.xci">
           <Proxy FileSetName="design_1_ibuf_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_0_0/design_1_RAshift16_4_up_0_0.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_1_1/design_1_RAshift16_4_up_1_1.xci">
           <Proxy FileSetName="design_1_RAshift16_4_up_1_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_2_0/design_1_RAshift16_4_up_2_0.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_2_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_2_1/design_1_RAshift16_4_up_2_1.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_2_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_switch_0_1/design_1_switch_0_1.xci">
-          <Proxy FileSetName="design_1_switch_0_1"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_FPGA_reset_0/design_1_FPGA_reset_0.xci">
+          <Proxy FileSetName="design_1_FPGA_reset_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_only_rx_0_0/design_1_only_rx_0_0.xci">
-          <Proxy FileSetName="design_1_only_rx_0_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_3_1/design_1_RAshift16_4_up_3_1.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_3_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_1_2/design_1_RAshift16_4_up_1_2.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_1_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_on_off_f1956_data_0/design_1_on_off_f1956_data_0.xci">
           <Proxy FileSetName="design_1_on_off_f1956_data_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_vio_0_0/design_1_vio_0_0.xci">
-          <Proxy FileSetName="design_1_vio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci">
-          <Proxy FileSetName="design_1_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_on_off_f1956_clk_0/design_1_on_off_f1956_clk_0.xci">
-          <Proxy FileSetName="design_1_on_off_f1956_clk_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_switch_0_1/design_1_switch_0_1.xci">
+          <Proxy FileSetName="design_1_switch_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_SPI_MUX_0/design_1_SPI_MUX_0.xci">
           <Proxy FileSetName="design_1_SPI_MUX_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_vio_0_0/design_1_vio_0_0.xci">
+          <Proxy FileSetName="design_1_vio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_0_1/design_1_RAshift16_4_up_0_1.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_2_2/design_1_RAshift16_4_up_2_2.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_2_2"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_only_tx_0_0/design_1_only_tx_0_0.xci">
           <Proxy FileSetName="design_1_only_tx_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_0_2/design_1_RAshift16_4_up_0_2.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_3_2/design_1_RAshift16_4_up_3_2.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_3_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_on_off_f1956_clk_0/design_1_on_off_f1956_clk_0.xci">
+          <Proxy FileSetName="design_1_on_off_f1956_clk_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_only_rx_0_0/design_1_only_rx_0_0.xci">
+          <Proxy FileSetName="design_1_only_rx_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
@@ -800,6 +916,49 @@
           <Attr Name="ImportTime" Val="1583132989"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/Rx/freq_correct/ref_ram.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/Rx/freq_correct/rom_freq_pr.svh">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/input_data/preamb_corr_20.svh">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/input_data/preamb_corr.svh">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/input_data/map_p_25mhz.svh">
+        <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/input_data/map_i.svh">
+        <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -844,6 +1003,14 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../xcorr/xcorr_tb.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../FPGA/prb_tsync_ram.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -904,9 +1071,9 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_RAshift16_4_up_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_0_0">
+    <FileSet Name="design_1_RAshift16_4_up_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_1_0">
       <Config>
-        <Option Name="TopModule" Val="design_1_RAshift16_4_up_0_0"/>
+        <Option Name="TopModule" Val="design_1_RAshift16_4_up_1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -916,39 +1083,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_RAshift16_4_up_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_0_1">
-      <Config>
-        <Option Name="TopModule" Val="design_1_RAshift16_4_up_0_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="design_1_ibuf_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_ibuf_0_0">
       <Config>
         <Option Name="TopModule" Val="design_1_ibuf_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_RAshift16_4_up_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_0_2">
-      <Config>
-        <Option Name="TopModule" Val="design_1_RAshift16_4_up_0_2"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_RAshift16_4_up_3_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_3_2">
-      <Config>
-        <Option Name="TopModule" Val="design_1_RAshift16_4_up_3_2"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_RAshift16_4_up_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_1_0">
-      <Config>
-        <Option Name="TopModule" Val="design_1_RAshift16_4_up_1_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_RAshift16_4_up_1_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_1_2">
-      <Config>
-        <Option Name="TopModule" Val="design_1_RAshift16_4_up_1_2"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -958,15 +1095,15 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_RAshift16_4_up_1_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_1_1">
+    <FileSet Name="design_1_RAshift16_4_up_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_0_2">
       <Config>
-        <Option Name="TopModule" Val="design_1_RAshift16_4_up_1_1"/>
+        <Option Name="TopModule" Val="design_1_RAshift16_4_up_0_2"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_RAshift16_4_up_3_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_3_1">
+    <FileSet Name="design_1_RAshift16_4_up_1_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_1_2">
       <Config>
-        <Option Name="TopModule" Val="design_1_RAshift16_4_up_3_1"/>
+        <Option Name="TopModule" Val="design_1_RAshift16_4_up_1_2"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -976,9 +1113,15 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_RAshift16_4_up_3_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_3_0">
+    <FileSet Name="design_1_RAshift16_4_up_3_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_3_2">
       <Config>
-        <Option Name="TopModule" Val="design_1_RAshift16_4_up_3_0"/>
+        <Option Name="TopModule" Val="design_1_RAshift16_4_up_3_2"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_RAshift16_4_up_1_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_1_1">
+      <Config>
+        <Option Name="TopModule" Val="design_1_RAshift16_4_up_1_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -988,15 +1131,33 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_on_off_f1956_clk_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_on_off_f1956_clk_0">
+    <FileSet Name="design_1_RAshift16_4_up_3_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_3_0">
       <Config>
-        <Option Name="TopModule" Val="design_1_on_off_f1956_clk_0"/>
+        <Option Name="TopModule" Val="design_1_RAshift16_4_up_3_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_SPI_MUX_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_SPI_MUX_0">
+    <FileSet Name="design_1_RAshift16_4_up_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_0_0">
       <Config>
-        <Option Name="TopModule" Val="design_1_SPI_MUX_0"/>
+        <Option Name="TopModule" Val="design_1_RAshift16_4_up_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_RAshift16_4_up_3_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_3_1">
+      <Config>
+        <Option Name="TopModule" Val="design_1_RAshift16_4_up_3_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_RAshift16_4_up_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_RAshift16_4_up_0_1">
+      <Config>
+        <Option Name="TopModule" Val="design_1_RAshift16_4_up_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_on_off_f1956_clk_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_on_off_f1956_clk_0">
+      <Config>
+        <Option Name="TopModule" Val="design_1_on_off_f1956_clk_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -1006,9 +1167,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_vio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_vio_0_0">
+    <FileSet Name="design_1_SPI_MUX_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_SPI_MUX_0">
       <Config>
-        <Option Name="TopModule" Val="design_1_vio_0_0"/>
+        <Option Name="TopModule" Val="design_1_SPI_MUX_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -1018,21 +1179,21 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_clk_wiz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_clk_wiz_0_0">
+    <FileSet Name="design_1_vio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_vio_0_0">
       <Config>
-        <Option Name="TopModule" Val="design_1_clk_wiz_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="design_1_only_rx_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_only_rx_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_1_only_rx_0_0"/>
+        <Option Name="TopModule" Val="design_1_vio_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
     <FileSet Name="design_1_only_tx_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_only_tx_0_0">
       <Config>
         <Option Name="TopModule" Val="design_1_only_tx_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_only_rx_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_only_rx_0_0">
+      <Config>
+        <Option Name="TopModule" Val="design_1_only_rx_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -1065,7 +1226,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_RAshift16_4_up_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_0_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="design_1_RAshift16_4_up_1_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_1_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -1083,52 +1244,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_RAshift16_4_up_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_0_1" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_0_1_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="design_1_ibuf_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_ibuf_0_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_ibuf_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_ibuf_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_1_RAshift16_4_up_0_2_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_0_2" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_0_2_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_1_RAshift16_4_up_3_2_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_3_2" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_3_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_3_2_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_1_RAshift16_4_up_1_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_1_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_1_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_1_RAshift16_4_up_1_2_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_1_2" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_1_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_1_2_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -1146,7 +1262,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_RAshift16_4_up_1_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_1_1" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_1_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_1_1_synth_1" IncludeInArchive="true">
+    <Run Id="design_1_RAshift16_4_up_0_2_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_0_2" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_0_2_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -1155,7 +1271,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_RAshift16_4_up_3_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_3_1" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_3_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_3_1_synth_1" IncludeInArchive="true">
+    <Run Id="design_1_RAshift16_4_up_1_2_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_1_2" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_1_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_1_2_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -1173,7 +1289,16 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_RAshift16_4_up_3_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_3_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_3_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_3_0_synth_1" IncludeInArchive="true">
+    <Run Id="design_1_RAshift16_4_up_3_2_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_3_2" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_3_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_3_2_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_RAshift16_4_up_1_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_1_1" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_1_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_1_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -1191,7 +1316,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_on_off_f1956_clk_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_on_off_f1956_clk_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_on_off_f1956_clk_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_on_off_f1956_clk_0_synth_1" IncludeInArchive="true">
+    <Run Id="design_1_RAshift16_4_up_3_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_3_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_3_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_3_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -1200,7 +1325,34 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_SPI_MUX_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_SPI_MUX_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_SPI_MUX_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_SPI_MUX_0_synth_1" IncludeInArchive="true">
+    <Run Id="design_1_RAshift16_4_up_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_0_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_RAshift16_4_up_3_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_3_1" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_3_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_3_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_RAshift16_4_up_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_RAshift16_4_up_0_1" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_RAshift16_4_up_0_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_on_off_f1956_clk_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_on_off_f1956_clk_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_on_off_f1956_clk_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_on_off_f1956_clk_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -1218,7 +1370,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_vio_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_vio_0_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_vio_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_vio_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="design_1_SPI_MUX_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_SPI_MUX_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_SPI_MUX_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_SPI_MUX_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -1236,7 +1388,16 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_clk_wiz_0_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_clk_wiz_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="design_1_vio_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_vio_0_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_vio_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_vio_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_only_tx_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_only_tx_0_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_only_tx_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_only_tx_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -1246,17 +1407,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="design_1_only_rx_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_only_rx_0_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_only_rx_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_only_rx_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_1_only_tx_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_only_tx_0_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_only_tx_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_only_tx_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -1284,7 +1434,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_RAshift16_4_up_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="design_1_RAshift16_4_up_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1316,87 +1466,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_RAshift16_4_up_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="design_1_ibuf_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_ibuf_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_ibuf_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_1_RAshift16_4_up_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_0_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_1_RAshift16_4_up_3_2_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_3_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_3_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_1_RAshift16_4_up_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_1_RAshift16_4_up_1_2_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_1_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_1_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1428,7 +1498,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_RAshift16_4_up_1_1_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_1_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_1_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="design_1_RAshift16_4_up_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_0_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1444,7 +1514,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_RAshift16_4_up_3_1_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_3_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_3_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="design_1_RAshift16_4_up_1_2_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_1_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_1_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1476,7 +1546,23 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_RAshift16_4_up_3_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_3_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_3_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="design_1_RAshift16_4_up_3_2_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_3_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_3_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_RAshift16_4_up_1_1_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_1_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_1_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1508,7 +1594,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_on_off_f1956_clk_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_on_off_f1956_clk_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_on_off_f1956_clk_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="design_1_RAshift16_4_up_3_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_3_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_3_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1524,7 +1610,55 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_SPI_MUX_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_SPI_MUX_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_SPI_MUX_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="design_1_RAshift16_4_up_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_RAshift16_4_up_3_1_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_3_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_3_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_RAshift16_4_up_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_RAshift16_4_up_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_RAshift16_4_up_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_on_off_f1956_clk_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_on_off_f1956_clk_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_on_off_f1956_clk_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1556,7 +1690,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_vio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_vio_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_vio_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="design_1_SPI_MUX_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_SPI_MUX_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_SPI_MUX_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1588,7 +1722,23 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_clk_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_clk_wiz_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="design_1_vio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_vio_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_vio_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="design_1_only_tx_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_only_tx_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_only_tx_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1605,24 +1755,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="design_1_only_rx_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_only_rx_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_only_rx_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="design_1_only_tx_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_only_tx_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_only_tx_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
           <Desc>Default settings for Implementation.</Desc>

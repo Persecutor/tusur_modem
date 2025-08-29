@@ -1981,13 +1981,13 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.CLKIN1_JITTER_PS {325.52} \
    CONFIG.CLKOUT1_DRIVES {BUFG} \
-   CONFIG.CLKOUT1_JITTER {129.455} \
-   CONFIG.CLKOUT1_PHASE_ERROR {167.736} \
+   CONFIG.CLKOUT1_JITTER {170.079} \
+   CONFIG.CLKOUT1_PHASE_ERROR {194.835} \
    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {184.320} \
    CONFIG.CLKOUT2_DRIVES {BUFG} \
-   CONFIG.CLKOUT2_JITTER {122.597} \
-   CONFIG.CLKOUT2_PHASE_ERROR {167.736} \
-   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {300} \
+   CONFIG.CLKOUT2_JITTER {160.853} \
+   CONFIG.CLKOUT2_PHASE_ERROR {194.835} \
+   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {280} \
    CONFIG.CLKOUT2_USED {true} \
    CONFIG.CLKOUT3_DRIVES {BUFG} \
    CONFIG.CLKOUT4_DRIVES {BUFG} \
@@ -1995,11 +1995,11 @@ proc create_root_design { parentCell } {
    CONFIG.CLKOUT6_DRIVES {BUFG} \
    CONFIG.CLKOUT7_DRIVES {BUFG} \
    CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {48} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {36} \
    CONFIG.MMCM_CLKIN1_PERIOD {32.552} \
    CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {8} \
-   CONFIG.MMCM_CLKOUT1_DIVIDE {5} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {6} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {4} \
    CONFIG.MMCM_COMPENSATION {ZHOLD} \
    CONFIG.MMCM_DIVCLK_DIVIDE {1} \
    CONFIG.NUM_OUT_CLKS {2} \
@@ -2047,8 +2047,8 @@ proc create_root_design { parentCell } {
   set vio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:vio:3.0 vio_0 ]
   set_property -dict [ list \
    CONFIG.C_EN_PROBE_IN_ACTIVITY {0} \
-   CONFIG.C_NUM_PROBE_IN {3} \
-   CONFIG.C_NUM_PROBE_OUT {8} \
+   CONFIG.C_NUM_PROBE_IN {5} \
+   CONFIG.C_NUM_PROBE_OUT {10} \
    CONFIG.C_PROBE_OUT0_INIT_VAL {0x1} \
    CONFIG.C_PROBE_OUT0_WIDTH {4} \
    CONFIG.C_PROBE_OUT1_INIT_VAL {0x2} \
@@ -2056,6 +2056,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_PROBE_OUT2_WIDTH {14} \
    CONFIG.C_PROBE_OUT3_WIDTH {24} \
    CONFIG.C_PROBE_OUT6_WIDTH {3} \
+   CONFIG.C_PROBE_OUT8_WIDTH {2} \
  ] $vio_0
 
   # Create instance: xlconstant_0, and set properties
@@ -2202,12 +2203,14 @@ proc create_root_design { parentCell } {
   connect_bd_net -net dout_data_5 [get_bd_pins AD9361_CTRL/dout_data_5] [get_bd_pins switch_0/iimdata_ad]
   set_property HDL_ATTRIBUTE.DEBUG {true} [get_bd_nets dout_data_5]
   connect_bd_net -net ibuf_0_out_ref [get_bd_pins AD9361_CTRL/FPGA_REF_40MHZ] [get_bd_pins CLK_AXI/out_ref]
-  connect_bd_net -net only_rx_0_DeFec_err_dtct [get_bd_ports LED3] [get_bd_pins only_rx_0/DeFec_err_dtct]
+  connect_bd_net -net only_rx_0_DeFec_err_dtct [get_bd_ports LED2] [get_bd_pins only_rx_0/DeFec_err_dtct]
   connect_bd_net -net only_rx_0_N_err [get_bd_pins only_rx_0/N_err] [get_bd_pins vio_0/probe_in1]
   connect_bd_net -net only_rx_0_N_sop_detect [get_bd_pins only_rx_0/N_sop_detect] [get_bd_pins vio_0/probe_in0]
-  connect_bd_net -net only_rx_0_corr_pr_detect [get_bd_ports LED2] [get_bd_pins only_rx_0/corr_pr_detect]
-  connect_bd_net -net only_rx_0_decrc_oerr [get_bd_ports PIN_1] [get_bd_pins only_rx_0/decrc_oerr]
-  connect_bd_net -net only_rx_0_decrc_verr [get_bd_ports PIN_0] [get_bd_pins only_rx_0/decrc_verr]
+  connect_bd_net -net only_rx_0_corr_pr_detect [get_bd_ports LED3] [get_bd_pins only_rx_0/corr_pr_detect]
+  connect_bd_net -net only_rx_0_decrc_verr [get_bd_ports PIN_1] [get_bd_pins only_rx_0/decrc_verr]
+  connect_bd_net -net only_rx_0_delta_ph [get_bd_pins only_rx_0/delta_ph] [get_bd_pins vio_0/probe_in3]
+  connect_bd_net -net only_rx_0_kb_ps [get_bd_pins only_rx_0/kb_ps] [get_bd_pins vio_0/probe_in4]
+  connect_bd_net -net only_rx_0_p1_verr [get_bd_ports PIN_0] [get_bd_pins only_rx_0/p1_verr]
   connect_bd_net -net only_rx_0_rx_ocorr_dtct [get_bd_ports PIN_2] [get_bd_pins only_rx_0/rx_ocorr_dtct]
   connect_bd_net -net only_rx_0_thr_lvl_auto [get_bd_pins only_rx_0/thr_lvl_auto] [get_bd_pins vio_0/probe_in2]
   connect_bd_net -net only_tx_0_osub_i [get_bd_pins AD9361_CTRL/din_data_4] [get_bd_pins only_tx_0/tx_i_axis_tdata] [get_bd_pins switch_0/iredata_tx]
@@ -2231,6 +2234,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net up_txnrx_1 [get_bd_pins AD9361_CTRL/dout] [get_bd_pins AD9364/up_enable] [get_bd_pins AD9364/up_txnrx]
   connect_bd_net -net vio_addr_shift [get_bd_pins only_rx_0/addr_shft] [get_bd_pins vio_0/probe_out2]
   connect_bd_net -net vio_bw [get_bd_pins only_rx_0/bw_in] [get_bd_pins only_tx_0/bw_in] [get_bd_pins vio_0/probe_out6]
+  connect_bd_net -net vio_data_off [get_bd_pins only_tx_0/data_off_tx] [get_bd_pins vio_0/probe_out9]
+  connect_bd_net -net vio_frsync_ctrl [get_bd_pins only_rx_0/frsync_ctrl] [get_bd_pins vio_0/probe_out8]
   connect_bd_net -net vio_m_in [get_bd_pins only_rx_0/m_in] [get_bd_pins only_tx_0/m_in] [get_bd_pins vio_0/probe_out1]
   connect_bd_net -net vio_rst_rx [get_bd_ports LED1] [get_bd_pins only_rx_0/rst] [get_bd_pins vio_0/probe_out4]
   connect_bd_net -net vio_ss_in [get_bd_pins only_rx_0/ss_in] [get_bd_pins only_tx_0/ss_in] [get_bd_pins vio_0/probe_out0]

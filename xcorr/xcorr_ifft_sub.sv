@@ -13,12 +13,25 @@ module xcorr_ifft_sub(
 	output					oeop
 );
 
-wire [31:0]	s_axis_data_tdata, m_axis_data_tdata;
+wire [31:0]	s_axis_data_tdata,s_axis_fifo_data_tdata, m_axis_data_tdata;
 wire signed [15:0]	s_axis_data_i, s_axis_data_q;
+
+wire ifft_fifo_tready,ifft_fifo_tvalid;
 
 assign s_axis_data_tdata = {s_axis_data_q,s_axis_data_i};
 assign s_axis_data_i = data_i;
 assign s_axis_data_q = data_q;
+
+axis_data_fifo_ifft_corr ifft_fifo_sub (
+  		.s_axis_aresetn			(~rst),  // input wire s_axis_aresetn
+  		.s_axis_aclk			(clk),        // input wire s_axis_aclk
+  		.s_axis_tvalid			(ival),    // input wire s_axis_tvalid
+  		.s_axis_tready			(),    // output wire s_axis_tready
+  		.s_axis_tdata			(s_axis_data_tdata),      // input wire [31 : 0] s_axis_tdata
+  		.m_axis_tvalid			(ifft_fifo_tvalid),    // output wire m_axis_tvalid
+  		.m_axis_tready			(ifft_fifo_tready),    // input wire m_axis_tready
+  		.m_axis_tdata			(s_axis_fifo_data_tdata)      // output wire [31 : 0] m_axis_tdata
+);
 
 
 assign odata_i = m_axis_data_tdata[15:0];
@@ -30,9 +43,9 @@ ifft_corr_1 ifft_corr_1_1 (
   .s_axis_config_tdata					(conf),					// input wire [7 : 0] s_axis_config_tdata
   .s_axis_config_tvalid					(1'd1),					// input wire s_axis_config_tvalid
   .s_axis_config_tready					(),						// output wire s_axis_config_tready
-  .s_axis_data_tdata					(s_axis_data_tdata),	// input wire [31 : 0] s_axis_data_tdata
-  .s_axis_data_tvalid					(ival),					// input wire s_axis_data_tvalid
-  .s_axis_data_tready					(),						// output wire s_axis_data_tready
+  .s_axis_data_tdata					(s_axis_fifo_data_tdata),	// input wire [31 : 0] s_axis_data_tdata
+  .s_axis_data_tvalid					(ifft_fifo_tvalid),					// input wire s_axis_data_tvalid
+  .s_axis_data_tready					(ifft_fifo_tready),						// output wire s_axis_data_tready
   .s_axis_data_tlast					(),						// input wire s_axis_data_tlast
   .m_axis_data_tdata					(m_axis_data_tdata),	// output wire [31 : 0] m_axis_data_tdata
   .m_axis_data_tuser					(oexp),					// output wire [7 : 0] m_axis_data_tuser

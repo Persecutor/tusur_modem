@@ -405,6 +405,44 @@ set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst
 set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT1]]
 set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT0]] -to [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT1]]
 set_false_path -from [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT1]] -to [get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/plle2_adv_inst/CLKOUT0]]
+
+
+
+
+
+
+
+
+create_debug_core u_ila_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 2 [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 4096 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list design_1_i/AD9361_CTRL/ad9361_clk/clk_DSP/inst/sample_rate_30_72]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+set_property port_width 12 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_q[0]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_q[1]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_q[2]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_q[3]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_q[4]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_q[5]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_q[6]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_q[7]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_q[8]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_q[9]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_q[10]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_q[11]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+set_property port_width 12 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_i[0]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_i[1]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_i[2]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_i[3]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_i[4]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_i[5]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_i[6]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_i[7]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_i[8]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_i[9]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_i[10]} {design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/osub_i[11]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+set_property port_width 18 [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[0]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[1]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[2]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[3]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[4]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[5]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[6]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[7]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[8]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[9]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[10]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[11]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[12]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[13]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[14]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[15]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[16]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_ifft_q_reg_1[17]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+set_property port_width 24 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[0]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[1]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[2]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[3]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[4]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[5]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[6]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[7]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[8]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[9]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[10]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[11]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[12]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[13]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[14]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[15]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[16]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[17]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[18]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[19]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[20]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[21]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[22]} {design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[23]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list design_1_i/only_rx_0/inst/RX_phy_sub/equalizer_sub/oval]]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

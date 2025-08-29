@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_FPGA_reset_0_synth_1'
+HD_PWD='F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_FPGA_reset_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

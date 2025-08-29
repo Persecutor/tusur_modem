@@ -6,6 +6,7 @@ module RX_phy(
 		input 			[3:0]			ss_in,
 		input 			[2:0]			m_in,
 		input           [2:0]           bw_in,
+		input			[1:0]			fr_sync_ctrl,
 		input			[23:0]			thr_lvl,
 		input 			[13:0]			addr_shft,
 
@@ -15,6 +16,7 @@ module RX_phy(
 		output							corr_pr_detect,
 		output                          ocorr_dtct,
 		output			[23:0]			thr_lvl_auto,
+		output			[23:0]			delta_ph,
 
 		input			[15:0]			isub_i,
 		input			[15:0]			isub_q);
@@ -30,7 +32,9 @@ localparam pLLR_W			= 5  ;
 //							Блок управления								
 //----------------------------------------------------------------------//
 
-wire [2:0]		m_control_rx, m_control_tx,bw_control_rx;
+wire [2:0]		m_control_rx, m_control_tx;
+
+(* mark_debug = "true" *) wire [2:0]      bw_control_rx;
 wire [3:0]		ss_control_rx, ss_control_tx;
 
 wire			demapper_osof;
@@ -39,7 +43,7 @@ wire			del_rst;
 
 control
 control_sub(
-		.clk			(clk_h)	,
+		.clk			(clk_low_data)	,
 		.rst			(~rst)			,
 		.sof_tx			()	,
 		.sof_rx			(demapper_osof)	,
@@ -73,8 +77,8 @@ fftshift_sub(
 	.osub_q		(fftshft_subc_q)
 );
 
-assign debug_i = isub_i;
-assign debug_q = isub_q;
+//assign debug_i = isub_i;
+//assign debug_q = isub_q;
 
 //----------------------------------------------------------------------//
 //							КОРРЕЛЯТОР
@@ -82,11 +86,16 @@ assign debug_q = isub_q;
 
 wire 					corr_sop;
 wire 					filt_osop;
+wire					filt_wind_sop;
 wire 					corr_oval;
 wire signed [5:0]		delay_sop;
 
 wire [fft_depth-1:0]	corr_subc_i;
 wire [fft_depth-1:0]	corr_subc_q;
+
+wire [17:0]				xcorr_peak_i,xcorr_peak_q;
+wire [47:0]				xcorr_peaks;
+wire [31:0]				freq_idata, freq_odata;
 
 xcorr_main #(file_cor_pream)
 xcorr_main_sub(
@@ -96,9 +105,12 @@ xcorr_main_sub(
 	.data_q		(fftshft_subc_q),
 	.ival		(),
 	.thr_lvl	(thr_lvl_auto),
+	.index_bw   (bw_control_rx),
 	.addr_shft	(addr_shft), // 8502 + wnd_size 14'd8517
 	.odata_i	(corr_subc_i),
 	.odata_q	(corr_subc_q),
+	.peak_i		(xcorr_peak_i),
+	.peak_q		(xcorr_peak_q),
 	.osop		(corr_sop),
 	.oval		(),
 	.corr_dtct	(ocorr_dtct)
@@ -124,8 +136,38 @@ filter_sop_sub(
 	.n_sps		(n_sps),
 	.osop		(filt_osop),
 	.delay_sop	(delay_sop),
-	.found_sync	(corr_pr_detect)
+	.found_sync	(corr_pr_detect),
+	.sop_frame	(filt_wind_sop)
 );
+
+wire fr_sync_osop;
+wire [fft_depth-1:0]	fr_corr_i, fr_corr_q;
+
+fr_sync
+#(
+	.pDAT_W		(12),
+	.pDAT_Num	(1024),
+	.pCP_Len	(32),
+	.pSB_Num	(50)
+)
+fr_sync_sub
+(
+	.clk				(clk_low_data),
+	.rst				(~del_rst),	
+	.fr_sync_ctrl		(fr_sync_ctrl),
+	.index_bw           (bw_control_rx),
+	.fr_sync_isop		(corr_sop && filt_wind_sop ),
+	.idata_i			(corr_subc_i),
+	.idata_q			(corr_subc_q),
+	.idata_corr_i		(xcorr_peak_i),
+	.idata_corr_q		(xcorr_peak_q),
+	.fr_sync_oval		(),
+	.fr_sync_osop		(fr_sync_osop),
+	.odata_i			(fr_corr_i),
+	.odata_q			(fr_corr_q),
+	.delta_ph			(delta_ph)
+);
+
 
 //----------------------------------------------------------------------//
 //							Удаление ЦП
@@ -145,16 +187,17 @@ interlayer_rmcp#(12, 1024, 32)
 interlayer_rmcp_sub(
 	.clk			(clk_low_data),
 	.rst			(~del_rst),
-	.isop			(filt_osop),  
-	.in_real_data	(corr_subc_i),
-	.in_imag_data	(corr_subc_q),
-	.delay_sop		(delay_sop),
+	.isop			(fr_sync_osop),  
+	.in_real_data	(fr_corr_i),
+	.in_imag_data	(fr_corr_q),
+	.delay_sop		(0),
 	.osop			(remove_subc_osop),
 	.oval			(remove_subc_oval),
 	.out_real_data	(remove_subc_i),
 	.out_imag_data	(remove_subc_q),
 	.count_frame	(rmcp_frame_count)
 );
+
 
 control_index_symb
 control_index_symb_sub(

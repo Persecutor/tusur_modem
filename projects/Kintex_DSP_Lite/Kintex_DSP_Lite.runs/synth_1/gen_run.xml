@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k325tffg676-2" LaunchTime="1751431871">
+<GenRun Id="synth_1" LaunchPart="xc7k325tffg676-2" LaunchTime="1756364016">
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
@@ -187,7 +187,51 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../FPGA/input_data/map_i_band_all.svh">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/map_i_ram.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/input_data/map_p_band_all.svh">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/map_p_ram.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../FPGA/include/parameters.vh">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/input_data/pilot.svh">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/input_data/preamb_q_bit.svh">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/input_data/preamb_i_bit.svh">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -298,6 +342,27 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../../../modem_ofdm_0/modem_ofdm/IP_libs/cordic_0/cordic_0.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../modem_ofdm_0/modem_ofdm/IP_libs/div_gen_fr_corr/div_gen_fr_corr.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../../modem_ofdm_0/modem_ofdm/IP_libs/cordic_2/cordic_2.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/ip/ifft_corr_1_1/ifft_corr_1.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -305,7 +370,21 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/ip/axis_data_fifo_ifft_corr/axis_data_fifo_ifft_corr.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/ip/fft_corr_1/fft_corr_1.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/speed_test.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -432,6 +511,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../xcorr/find_max.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/Rx/freq_correct/fr_sync.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -613,6 +699,32 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../FPGA/input_data/pream_freq_band_all.svh">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/Rx/freq_correct/prb_fsync_ram.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/input_data/pream_tsync_band_all.svh">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../xcorr/prb_tsync_ram.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../FPGA/prbs/prbs23_check.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -628,6 +740,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../FPGA/Rx/submodule equalizer/sub_eq_1.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/Rx/freq_correct/sync_fifo.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -687,6 +806,49 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../FPGA/Rx/freq_correct/ref_ram.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/Rx/freq_correct/rom_freq_pr.svh">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/input_data/preamb_corr_20.svh">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/input_data/preamb_corr.svh">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/input_data/map_p_25mhz.svh">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../FPGA/input_data/map_i.svh">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/sync/mqc_t.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -735,6 +897,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../FPGA/prb_tsync_ram.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="design_1_wrapper"/>
@@ -765,26 +935,25 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_2_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_1_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_3_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ibuf_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_1_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_FPGA_reset_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_2_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_3_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_2_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_RAshift16_4_up_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_on_off_f1956_clk_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_SPI_MUX_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_only_rx_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_on_off_f1956_data_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_vio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_SPI_MUX_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_switch_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_vio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_only_tx_0_0"/>
 </GenRun>

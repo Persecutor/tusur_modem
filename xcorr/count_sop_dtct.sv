@@ -3,10 +3,9 @@ module count_sop_dtct(
 	input					rst,
 	input					sop,
 
-(* mark_debug = "true" *)	input			[23:0]	thr_lvl,
-
-(* mark_debug = "true" *)	output logic	[14:0]	n_sps,
-(* mark_debug = "true" *)	output logic	[23:0]	thr_lvl_auto
+input			[23:0]	thr_lvl,
+output logic	[14:0]	n_sps,
+output logic	[23:0]	thr_lvl_auto
 );
 
 
@@ -15,16 +14,16 @@ reg [14:0] 		 n_sp_loc;
 reg [14:0] 		 n_sps_true_loc;
 
 reg	[15:0]	count_samp;
-(* mark_debug = "true" *) reg [23:0]	local_thr_lvl, local_thr_lvl_1;
+reg [23:0]	local_thr_lvl, local_thr_lvl_1;
 
 
 localparam  num_samp = 52800;
 localparam  n_sop_opor = 20;
 localparam  smplrt = num_samp*n_sop_opor;
 
-localparam	step_1	= 100;
-localparam  step_2	= 50;
-localparam	step_3	= 10;
+localparam	step_1	= 50;
+localparam  step_2	= 25;
+localparam	step_3	= 5;
 
 localparam	border_1 = 10;
 localparam	border_2 = 5;

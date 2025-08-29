@@ -11,6 +11,7 @@ module only_rx #(
 	input 			[2:0]										m_in,
 	input           [2:0]                                       bw_in,
 	input			[23:0]										thr_lvl,
+	input			[1:0]										frsync_ctrl,
 
 	input			[15:0]										rx_i_axis_tdata,
 	input														rx_i_axis_tvalid,
@@ -23,8 +24,12 @@ module only_rx #(
 	output                                                      DeFec_err_dtct,
 	output                                                      decrc_oerr,
 	output                                                      decrc_verr,
+	output                                                      p1_verr,
+	output                                                      p2_oerr,
+	output                                                      time_er,
 	output                                                      rx_ocorr_dtct,
-
+	output			[23:0]										delta_ph,
+	output          [17:0]                                      kb_ps,
 
 
 	output			[23:0]										thr_lvl_auto,
@@ -57,6 +62,7 @@ RX_phy_sub(
 		.rst				(rst),
 		.ss_in				(ss_in),
 		.m_in				(m_in),
+	    .fr_sync_ctrl		(frsync_ctrl),
 		.bw_in				(bw_in),
 		.thr_lvl			(thr_lvl),
 		.addr_shft			(addr_shft),
@@ -67,7 +73,8 @@ RX_phy_sub(
 		.corr_pr_detect		(corr_pr_detect),
 		.ocorr_dtct         (rx_ocorr_dtct),
 		.isub_i				(rx_i_axis_tdata),
-		.isub_q				(rx_q_axis_tdata));
+		.isub_q				(rx_q_axis_tdata),
+		.delta_ph			(delta_ph));
 
 
 axis_data_fifo_fhy_defec axis_data_fifo_fhy_defec_sub (
@@ -141,6 +148,22 @@ assign m_axis_tdata	 =	m_axis_tdata_l;
 assign m_axis_tvalid =	m_axis_tvalid_l;
 assign m_axis_tlast  =	0;
 assign m_axis_tuser	 =  0;
+
+
+speed_test #(
+    .B1(1920)  // �?зменение на 5 единиц
+) speed_test_sub 
+(
+    .clk      (clk_l),
+    .clk_hh   (clk_hh),
+    .reset    (~rst),
+    .p1       (decrc_verr),
+    .p2       (decrc_oerr),
+    .d1_out   (kb_ps),
+    .valid_out(time_er),
+	.p1_rise  (p1_verr),
+	.p2_rise  (p2_oerr)
+);
 
 
 endmodule

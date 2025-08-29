@@ -5,7 +5,7 @@ module TX_phy(
 		input 			[3:0]			ss_in,
 		input 			[2:0]			m_in,
 		input           [2:0]           bw_in,
-
+	    input                           data_off,
 		input							s_ax_ibit,
 		input							s_ax_ival,
 		output							s_ax_oreq,
@@ -33,7 +33,7 @@ wire			mapper_osof;
 
 
 wire			del_rst;
-
+wire            data_off_control_tx;
 control
 control_sub(
 		.clk			(clk_h)	,
@@ -43,12 +43,14 @@ control_sub(
 		.index_M		(m_in)			,
 		.index_SS		(ss_in)			,
 		.index_BW       (bw_in),
+		.index_data_off (data_off),
 		.oindex_M_rx	()	,
 		.oindex_SS_rx	()	,
 		.oindex_BW_rx	()	,
 		.oindex_M_tx	(m_control_tx)	,
 		.oindex_SS_tx	(ss_control_tx)	,
 	    .oindex_BW_tx	(bw_control_tx)	,
+	    .oindex_data_off_tx (data_off_control_tx),
 		.del_rst		(del_rst));
 
 
@@ -97,6 +99,7 @@ mapper_sub(
 		.ready_frame		(1'd1)				,
 		.enable				(1'd1)				,
 		.index_bw           (bw_control_tx)     ,
+		.data_off           (data_off_control_tx),
 		.index_ss			(ss_control_tx)		,  
 		.index_M_in			(m_control_tx)		,
 		.index_M_out		(mapper_index_M)	,

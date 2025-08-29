@@ -77,7 +77,7 @@ module deInterleaver(
 
             if (pack_cnt == PACK_LEN)
                 pack_cnt <= '0;
-            else if ((ival&pack_trg)||(isop&ival))
+            else if ((ival&pack_trg)||(ival&isop))
                 pack_cnt <= pack_cnt + 1'b1;    
         end    
     end
@@ -87,9 +87,12 @@ module deInterleaver(
     logic					 [4:0]	intram_idat		;
     logic							intram_read_en	;	
     logic			[DATA_WIDTH:0]	intram_read_cnt	;
+
     logic					 [4:0]	intram_odat		;
     logic							val;
-
+    logic                           oval_tmp; 
+    logic                           wrt_end_strob;
+    logic                           rd_end_strob;
     deinterl_ram
     #( 
     	.ADDR_WIDTH		(ADDR_WIDTH+1)
@@ -100,23 +103,28 @@ module deInterleaver(
     	.en_wr          (intram_write_en	),
     	.wr_ram_counter (intram_write_cnt	),
     	.in_bit_data    (intram_idat		),
-    	.en_r           (intram_read_en		),
+    	.en_r           (intram_read_en	    ),
     	.r_ram_counter  (intram_read_cnt	),
     	.read_data_out	(intram_odat		)	
     );
 
-    assign	intram_write_en		= ival	;
-    assign	intram_write_cnt	= { mem_list, pack_cnt};
-    assign	intram_idat			= idat	;
-    assign	intram_read_cnt		= {~mem_list, perm_addr}-1;
-    assign  intram_read_en      = pack_rdy_delay;
-
+    //assign	intram_write_en		= ival	;
+    //assign	intram_idat			= idat	;
     assign wrt_end_strob 	= (pack_cnt==PACK_LEN-1)&ival;
     assign rd_end_strob  	= (read_cnt==PACK_LEN-1)&pack_rdy;
 
     logic pack_rdy_delay;
     always @ (posedge iclk) begin
+        intram_write_en <= ival	;
+        intram_idat <= idat;
         pack_rdy_delay <= pack_rdy;
+        intram_write_cnt <= { mem_list, pack_cnt};
+        intram_read_cnt <= {~mem_list, perm_addr}-1;
+        intram_read_en <= pack_rdy_delay;
+        oeof <= oval_tmp&~val;
+        osop <= (oval_tmp&(read_cnt==2))||(oval_tmp&(read_cnt==2306));
+        oeop <= (oval_tmp&(read_cnt==1921))||(oval_tmp&(read_cnt==4225));    
+        oval <= oval_tmp;
     end
 
 
@@ -127,7 +135,7 @@ module deInterleaver(
         end
         else
             if (wrt_end_strob) begin
-                if (~(pack_rdy||oval)) begin
+                if (~(pack_rdy||oval_tmp)) begin
                     mem_list <= ~mem_list;
                 end
                 pack_rdy <= 1;
@@ -175,11 +183,11 @@ module deInterleaver(
     always @ (posedge iclk or negedge irst) begin
     if (~irst) begin
         val  <= '0;
-        oval <= '0;
+        oval_tmp <= '0;
     end
     else begin
         val  <= ~gap_trig&pack_rdy;
-        oval <= val;
+        oval_tmp <= val;
     end
     end
 
@@ -188,17 +196,14 @@ module deInterleaver(
             oerr  <= '0;
         end
         else begin
-            if (wrt_end_strob&(pack_rdy||oval))
+            if (wrt_end_strob&(pack_rdy||oval_tmp))
                 oerr <= 1;
-            else if (wrt_end_strob&~(pack_rdy||oval))
+            else if (wrt_end_strob&~(pack_rdy||oval_tmp))
                 oerr <= 0;
         end
     end
 
     assign odat = intram_odat;
-    assign oeof = oval&~val;
-    assign osop = (oval&(read_cnt==2))||(oval&(read_cnt==2306));
-    assign oeop = (oval&(read_cnt==1921))||(oval&(read_cnt==4225));
     
 
 endmodule

@@ -7,6 +7,11 @@ module find_max#(
 	input [wdth_crr-1:0] 	corr_in,
 	input [wdth_crr-1:0]	thr_lvl,
 
+	input	[17:0]			data_i,
+	input	[17:0]			data_q,
+
+	output	[17:0]			odata_i,
+	output	[17:0]			odata_q,
 	output	logic			osop
 );
 localparam cnt_wdt = $clog2(wnd_size);
@@ -14,6 +19,15 @@ localparam cnt_wdt = $clog2(wnd_size);
 logic	[cnt_wdt-1:0]	cnt_wr, cnt_rd, cnt_val;
 
 logic	loc_val;
+logic	loc_sop;
+
+reg	[wdth_crr-1:0]		read_buff;
+logic [wdth_crr-1:0]	local_max;
+
+reg	[17:0]			locdata_i_0, locdata_q_0, locdata_i_1, locdata_q_1;
+
+assign odata_i = locdata_i_1;
+assign odata_q = locdata_q_1;
 
 always @(posedge clk) begin
 	if(rst) begin
@@ -43,7 +57,6 @@ always @(posedge clk) begin
 	end
 end
 
-logic [wdth_crr-1:0]	local_max;
 
 
 always @(posedge clk) begin
@@ -53,17 +66,22 @@ always @(posedge clk) begin
 	end
 	else if(loc_val) begin
 		if(cnt_val == 0) begin
-			local_max <= read_buff;
-			cnt_rd	  <= cnt_wr;
+			local_max 	<= read_buff;
+			cnt_rd	  	<= cnt_wr;
+
+			locdata_i_1 <= locdata_i_0;
+			locdata_q_1 <= locdata_q_0;
 		end
 		else if(read_buff > local_max) begin
-			local_max <= read_buff;
-			cnt_rd 	  <= cnt_wr;
+			local_max 	<= read_buff;
+			cnt_rd 	  	<= cnt_wr;
+			locdata_i_1 <= locdata_i_0;
+			locdata_q_1 <= locdata_q_0;
 		end
 	end
 end
 
-logic loc_sop;
+
 
 always @(posedge clk) begin
 	if(rst) begin
@@ -84,10 +102,11 @@ always @(posedge clk) begin
 
 end
 
-reg	[wdth_crr-1:0]	read_buff;
 
 always @(posedge clk) begin
 	read_buff <= corr_in;
+	locdata_i_0 <= data_i;
+	locdata_q_0 <= data_q;
 end
 
 

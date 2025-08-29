@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Wed Jul  2 11:50:34 2025
+//Date        : Thu Aug 28 13:28:27 2025
 //Host        : TOR00094 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -4423,8 +4423,10 @@ module design_1
   wire [23:0]only_rx_0_N_err;
   wire [14:0]only_rx_0_N_sop_detect;
   wire only_rx_0_corr_pr_detect;
-  wire only_rx_0_decrc_oerr;
   wire only_rx_0_decrc_verr;
+  wire [23:0]only_rx_0_delta_ph;
+  wire [17:0]only_rx_0_kb_ps;
+  wire only_rx_0_p1_verr;
   wire only_rx_0_rx_ocorr_dtct;
   wire [23:0]only_rx_0_thr_lvl_auto;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire [15:0]only_tx_0_osub_i;
@@ -4446,6 +4448,8 @@ module design_1
   wire [0:0]up_txnrx_1;
   wire [13:0]vio_addr_shift;
   wire [2:0]vio_bw;
+  wire [0:0]vio_data_off;
+  wire [1:0]vio_frsync_ctrl;
   wire [2:0]vio_m_in;
   wire [0:0]vio_rst_rx;
   wire [3:0]vio_ss_in;
@@ -4463,10 +4467,10 @@ module design_1
   assign AXI_TX_DATA_IN_1 = AXI_TX_DATA_IN[16:0];
   assign FPGA_REF_40MHZ_1 = FPGA_REF_40MHZ;
   assign LED1[0] = vio_rst_rx;
-  assign LED2[0] = only_rx_0_corr_pr_detect;
-  assign LED3[0] = only_rx_0_DeFec_err_dtct;
-  assign PIN_0 = only_rx_0_decrc_verr;
-  assign PIN_1 = only_rx_0_decrc_oerr;
+  assign LED2[0] = only_rx_0_DeFec_err_dtct;
+  assign LED3[0] = only_rx_0_corr_pr_detect;
+  assign PIN_0 = only_rx_0_p1_verr;
+  assign PIN_1 = only_rx_0_decrc_verr;
   assign PIN_2 = only_rx_0_rx_ocorr_dtct;
   assign ad9361_1_P0_N[5:0] = DSP_ad9361_1_P0_N;
   assign ad9361_1_P0_P[5:0] = DSP_ad9361_1_P0_P;
@@ -5053,11 +5057,14 @@ module design_1
         .clk_hh(clk_wiz_0_clk_out2),
         .clk_l(AD9361_CTRL_clk_out1),
         .corr_pr_detect(only_rx_0_corr_pr_detect),
-        .decrc_oerr(only_rx_0_decrc_oerr),
         .decrc_verr(only_rx_0_decrc_verr),
+        .delta_ph(only_rx_0_delta_ph),
+        .frsync_ctrl(vio_frsync_ctrl),
+        .kb_ps(only_rx_0_kb_ps),
         .m_axis_aclk(clk_wiz_0_clk_out2),
         .m_axis_tready(1'b1),
         .m_in(vio_m_in),
+        .p1_verr(only_rx_0_p1_verr),
         .rst(vio_rst_rx),
         .rx_i_axis_aclk(AD9361_CTRL_clk_out1),
         .rx_i_axis_tdata(switch_0_oredata_rx),
@@ -5073,6 +5080,7 @@ module design_1
        (.bw_in(vio_bw),
         .clk_h(clk_wiz_0_clk_out1),
         .clk_l(AD9361_CTRL_clk_out1),
+        .data_off_tx(vio_data_off),
         .m_in(vio_m_in),
         .rst(vio_tx_rst),
         .s_axis_aclk(AD9361_CTRL_clk_out1),
@@ -5100,6 +5108,8 @@ module design_1
         .probe_in0(only_rx_0_N_sop_detect),
         .probe_in1(only_rx_0_N_err),
         .probe_in2(only_rx_0_thr_lvl_auto),
+        .probe_in3(only_rx_0_delta_ph),
+        .probe_in4(only_rx_0_kb_ps),
         .probe_out0(vio_ss_in),
         .probe_out1(vio_m_in),
         .probe_out2(vio_addr_shift),
@@ -5107,7 +5117,9 @@ module design_1
         .probe_out4(vio_rst_rx),
         .probe_out5(vio_switch_tx_ad),
         .probe_out6(vio_bw),
-        .probe_out7(vio_tx_rst));
+        .probe_out7(vio_tx_rst),
+        .probe_out8(vio_frsync_ctrl),
+        .probe_out9(vio_data_off));
   design_1_xlconstant_0_0 xlconstant_0
        (.dout(xlconstant_0_dout));
   design_1_xlconstant_0_1 xlconstant_1

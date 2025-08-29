@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri Jun 20 11:57:01 2025
+// Date        : Tue Jul  8 14:09:49 2025
 // Host        : TOR00094 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_switch_0_1/design_1_switch_0_1_sim_netlist.v
+//               F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_switch_0_1/design_1_switch_0_1_sim_netlist.v
 // Design      : design_1_switch_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

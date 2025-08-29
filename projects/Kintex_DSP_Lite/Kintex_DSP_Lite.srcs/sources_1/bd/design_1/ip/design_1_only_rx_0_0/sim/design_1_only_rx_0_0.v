@@ -63,6 +63,7 @@ module design_1_only_rx_0_0 (
   m_in,
   bw_in,
   thr_lvl,
+  frsync_ctrl,
   rx_i_axis_tdata,
   rx_i_axis_tvalid,
   rx_i_axis_tready,
@@ -74,7 +75,12 @@ module design_1_only_rx_0_0 (
   DeFec_err_dtct,
   decrc_oerr,
   decrc_verr,
+  p1_verr,
+  p2_oerr,
+  time_er,
   rx_ocorr_dtct,
+  delta_ph,
+  kb_ps,
   thr_lvl_auto,
   N_sop_detect,
   N_err,
@@ -98,6 +104,7 @@ input wire [3 : 0] ss_in;
 input wire [2 : 0] m_in;
 input wire [2 : 0] bw_in;
 input wire [23 : 0] thr_lvl;
+input wire [1 : 0] frsync_ctrl;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 rx_i_axis TDATA" *)
 input wire [15 : 0] rx_i_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 rx_i_axis TVALID" *)
@@ -117,7 +124,12 @@ output wire corr_pr_detect;
 output wire DeFec_err_dtct;
 output wire decrc_oerr;
 output wire decrc_verr;
+output wire p1_verr;
+output wire p2_oerr;
+output wire time_er;
 output wire rx_ocorr_dtct;
+output wire [23 : 0] delta_ph;
+output wire [17 : 0] kb_ps;
 output wire [23 : 0] thr_lvl_auto;
 output wire [14 : 0] N_sop_detect;
 output wire [23 : 0] N_err;
@@ -129,10 +141,10 @@ output wire m_axis_tvalid;
 output wire m_axis_tlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TUSER" *)
 output wire [0 : 0] m_axis_tuser;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 294912000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 276480000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis TREADY" *)
 input wire m_axis_tready;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_aclk, ASSOCIATED_BUSIF m_axis, FREQ_HZ 294912000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_aclk, ASSOCIATED_BUSIF m_axis, FREQ_HZ 276480000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m_axis_aclk CLK" *)
 input wire m_axis_aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rx_i_axis_aclk, ASSOCIATED_BUSIF rx_i_axis, FREQ_HZ 30720000, PHASE 0.0, CLK_DOMAIN design_1_clk_DSP_0_sample_rate_30_72, INSERT_VIP 0" *)
@@ -153,6 +165,7 @@ input wire rx_q_axis_aclk;
     .m_in(m_in),
     .bw_in(bw_in),
     .thr_lvl(thr_lvl),
+    .frsync_ctrl(frsync_ctrl),
     .rx_i_axis_tdata(rx_i_axis_tdata),
     .rx_i_axis_tvalid(rx_i_axis_tvalid),
     .rx_i_axis_tready(rx_i_axis_tready),
@@ -164,7 +177,12 @@ input wire rx_q_axis_aclk;
     .DeFec_err_dtct(DeFec_err_dtct),
     .decrc_oerr(decrc_oerr),
     .decrc_verr(decrc_verr),
+    .p1_verr(p1_verr),
+    .p2_oerr(p2_oerr),
+    .time_er(time_er),
     .rx_ocorr_dtct(rx_ocorr_dtct),
+    .delta_ph(delta_ph),
+    .kb_ps(kb_ps),
     .thr_lvl_auto(thr_lvl_auto),
     .N_sop_detect(N_sop_detect),
     .N_err(N_err),

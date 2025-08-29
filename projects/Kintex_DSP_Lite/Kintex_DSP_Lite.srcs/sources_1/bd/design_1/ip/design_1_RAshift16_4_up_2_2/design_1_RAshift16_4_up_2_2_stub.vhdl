@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Wed Jun 18 11:55:10 2025
+-- Date        : Tue Jul  8 14:01:35 2025
 -- Host        : TOR00094 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               F:/work/Izhevsk_project_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_RAshift16_4_up_2_2/design_1_RAshift16_4_up_2_2_stub.vhdl
+--               F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_RAshift16_4_up_2_2/design_1_RAshift16_4_up_2_2_stub.vhdl
 -- Design      : design_1_RAshift16_4_up_2_2
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7k325tffg676-2

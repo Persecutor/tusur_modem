@@ -40,9 +40,19 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog {
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/enc/define.vh
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/enc/ldpc_parameters.svh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/map_i_band_all.svh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/map_p_band_all.svh
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/include/parameters.vh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/pilot.svh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/preamb_q_bit.svh
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/preamb_i_bit.svh
 }
 set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/enc/ldpc_parameters.svh]
+set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/map_i_band_all.svh]
+set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/map_p_band_all.svh]
+set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/pilot.svh]
+set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/preamb_q_bit.svh]
+set_property file_type "Verilog Header" [get_files F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/input_data/preamb_i_bit.svh]
 read_verilog -library xil_defaultlib -sv {
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/FEC.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/P2S_conv_4x1.sv
@@ -59,6 +69,8 @@ read_verilog -library xil_defaultlib -sv {
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/interleaver.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/enc/ldpc_enc.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/enc/ldpc_enc_addr_gen.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/map_i_ram.sv
+  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/map_p_ram.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/mapper.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/modulator.sv
   F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/prbs/prbs23_gen.sv

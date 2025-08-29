@@ -45,17 +45,17 @@ logic 	[sz_count-1:0]		symb_counter;
 logic	[fft_depth-1:0]		subc_i_loc,	subc_q_loc, subc_i_loc1, subc_q_loc1, subc_i_loc2, subc_q_loc2, subc_i_loc3, subc_q_loc3;
 
 
-logic [13:0]    map_data   [fftsize - 1:0];
+//(* ram_style = "block" *)  logic [11:0]    map_data   [fftsize - 1:0];
 logic [1:0]     map_i;
-logic [1:0]		map_p		[0:fftsize-1];
+logic [1:0]		map_p;
 
 logic [1:0]		oindex_loc;
 logic			eop, loc_val;
 
 initial begin
 
-	$readmemb(file_map_symb,    map_data);
-	$readmemb(file_map_pream,   map_p);
+	//$readmemb(file_map_symb,    map_data);
+	//$readmemb(file_map_pream,   map_p);
 
 
 	symb_counter	<= '0;
@@ -64,9 +64,12 @@ initial begin
 	index_M_out 	<= '0;
 	loc_val		<= '0;
 end
+
+
+assign oindex_subc = frame_counter > N_pream - 1 ? map_i: map_p;
 ////////////////////////////////////////////////////////////////// code
 
-always_comb begin
+/*always_comb begin
 	if(rst)
 		map_i = '0;
 	else if (symb_counter < fftsize)
@@ -78,13 +81,13 @@ always_comb begin
 			3'd3: map_i = map_data[symb_counter][7:6];
 			3'd4: map_i = map_data[symb_counter][9:8];
 			3'd5: map_i = map_data[symb_counter][11:10];
-			3'd6: map_i = map_data[symb_counter][13:12];
+			//3'd6: map_i = map_data[symb_counter][13:12];
 		endcase
 	end else  map_i = '0;  
 end
-
+*/
 always @(posedge clk) osop <= isop;
-always @(posedge clk) osof <= isop && frame_counter == 7'd0;
+always @(posedge clk) osof <= isop && (frame_counter == 7'd2 || frame_counter == 7'd0);
 
 
 always @(posedge clk) loc_val <= ival;
@@ -99,7 +102,7 @@ always @(posedge clk) begin
 		index_M_out 	<= '0;
 		index_bw_out    <= '0;
 		index_SS_out	<= '0;
-		oindex_subc 	<= '0;
+		//oindex_subc 	<= '0;
 	end
 	else if(ival) begin
 		subc_i_loc		<= subc_i;
@@ -108,7 +111,7 @@ always @(posedge clk) begin
 		index_M_out 	<= index_M_in;
 		index_SS_out	<= index_ss;
 		index_bw_out    <= index_bw;
-		oindex_subc 	<= frame_counter > N_pream - 1 ? map_i: map_p[symb_counter];
+		//oindex_subc 	<= frame_counter > N_pream - 1 ? map_i: map_p[symb_counter];
 	end
 	else begin
 		subc_i_loc 	<= '0;
@@ -117,7 +120,7 @@ always @(posedge clk) begin
 		index_bw_out    <= '0;
 		index_M_out 	<= '0;
 		index_SS_out	<= '0;
-		oindex_subc 	<= '0;
+		//oindex_subc 	<= '0;
 	end
 end
 
@@ -144,5 +147,37 @@ always @(posedge clk) begin
 	else if(ival & enable)
 		symb_counter <= symb_counter + 1'b1;
 end
+
+
+map_i_ram#(
+	.depht_ram	(sz_count),
+	//.map_path   ("../input_data/map_i.svh"),
+	//.CFG ("map_i"),
+	.fftsize    (fftsize),
+	.Num_bw     (6)
+)
+map_i_ram_sub
+(
+	.clk	(clk),
+	.addr	(symb_counter),
+	.index_bw	(index_bw),
+	.odat	 (map_i)
+);
+
+map_p_ram#(
+	.depht_ram	(sz_count),
+	//.map_path   ("../input_data/map_p_25mhz.svh"),
+	//.CFG ("map_p"),
+	.fftsize    (fftsize),
+	.Num_bw     (6)
+)
+map_p_ram_sub
+(
+	.clk	(clk),
+	.addr	(symb_counter),
+	.index_bw	(index_bw),
+	.odat	 (map_p)
+);
+
 						  
 endmodule

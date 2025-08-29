@@ -16,13 +16,13 @@ parameter 	fft_depth = 12,
 	input										enable,
 	input signed		[fft_depth-1:0]			sub_i,
 	input signed		[fft_depth-1:0]			sub_q,
-	output logic								oval,
+	(* mark_debug = "true" *) output logic								   oval,
 	output										osop,
 	output				[1:0]					oindex,
 	output logic		[2:0]					index_M_out,
 	output logic		[3:0]					index_SS_out,
-	output logic signed	[fft_depth-1:0]			osub_i,
-	output logic signed	[fft_depth-1:0]			osub_q
+	(* mark_debug = "true" *) output logic signed	[fft_depth-1:0]			osub_i,
+	(* mark_debug = "true" *) output logic signed	[fft_depth-1:0]			osub_q
 
 );
 

@@ -32,10 +32,11 @@ module mapper#(parameter maxWordOut = 6)(
 	input           [3:0]           index_ss,
 	input           [2:0]           index_M_in,
 	input logic     [2:0]           index_bw,
+	input                           data_off,
     input                           enable,
 
 	output logic    [2:0]           index_M_out,
-    output logic                    osof,
+    (* mark_debug = "true" *) output logic                    osof,
 	output logic    [1:0]           index,
 	output logic                    oreq,
 	output logic [maxWordOut-1:0]   obit,
@@ -53,7 +54,7 @@ localparam sz_count_p   = $clog2(n_pilot);
 
 
 logic [ $clog2(frame_size)-1:0] frame_counter;
-logic [sz_count-1:0]            symb_counter;
+logic [sz_count-1:0]            symb_counter, symb_counter_2;
 logic [10:0]                    preamb_counter;
 logic [4:0]                     ss_counter;
 logic [sz_count_p-1:0]          pilot_counter;
@@ -61,33 +62,37 @@ logic [sz_count_p-1:0]          pilot_counter;
 logic [maxWordOut-1:0]      data, 
                             data_low, 
                             data_low_2;
-logic [1:0]     map_i;
-logic [13:0]    map_data   [fftsize - 1:0];
-logic [1:0]     map_p   [fftsize - 1:0];
-logic           pilot   [n_pilot-1:0];
-logic           pream_i [pream_size-1:0];
-logic           pream_q [pream_size-1:0];
+
+logic [1:0]     map_i, map_p_l;
+//logic [1:0]     map_p   [fftsize - 1:0];
+//logic           pilot   [n_pilot-1:0];
+// logic           pream_i [pream_size-1:0];
+// logic           pream_q [pream_size-1:0];
 
 logic [1:0]		loc_index;
 logic			loc_oreq;
 
 
-
 logic   next_symb, now_count,prev_count;
 reg     local_bit, local_val;
 
+`include "../input_data/pilot.svh";
+// `include "../input_data/map_i.svh";
+//`include "../input_data/map_p_25mhz.svh";
+`include "../input_data/preamb_i_bit.svh";
+`include "../input_data/preamb_q_bit.svh";
 
 initial begin
 
-    $readmemb(file_map_symb,    map_data);
-    $readmemb(file_map_pream,   map_p);
-    $readmemb(file_pilot,       pilot);
-    $readmemb(file_t_pream_i,   pream_i);
-    $readmemb(file_t_pream_q,   pream_q);
+    //$readmemb(file_map_symb,    map_i);
+    //$readmemb(file_map_pream,   map_p);
+   // $readmemb(file_pilot,       pilot);
+    // $readmemb(file_t_pream_i,   pream_i);
+    // $readmemb(file_t_pream_q,   pream_q);
 
     frame_counter   <= '0;
     preamb_counter  <= '0;
-    symb_counter	<= size_sumb-1;
+    symb_counter_2	<= size_sumb-1;
     pilot_counter 	<= '0;
     data 			<= '0;
     data_low 		<= '0;
@@ -105,24 +110,6 @@ end
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Данные на выходе в зависимости от Карты
-
-always_comb begin
-	if(rst)
-		map_i = '0;
-	else if (symb_counter < fftsize)
-	begin
-		case (index_bw)
-			3'd0: map_i = map_data[symb_counter][1:0];
-			3'd1: map_i = map_data[symb_counter][3:2];
-			3'd2: map_i = map_data[symb_counter][5:4];
-			3'd3: map_i = map_data[symb_counter][7:6];
-			3'd4: map_i = map_data[symb_counter][9:8];
-			3'd5: map_i = map_data[symb_counter][11:10];
-			3'd6: map_i = map_data[symb_counter][13:12];
-		endcase
-	end else  map_i = '0;  
-end
-
 
 always_comb begin
 	if(rst)
@@ -180,6 +167,9 @@ end
 
 always @(posedge clk) begin
 	oval <= local_val;
+	symb_counter <= symb_counter_2;
+
+	//map_p_l <= map_p[symb_counter_2];
 end
 
 
@@ -208,9 +198,10 @@ always @(posedge clk) begin
         index       <= '0;
     end
     else begin
-        if(symb_counter < fftsize)
-		    // loc_index <= frame_counter > N_pream - 1 ? map_i[symb_counter] : (frame_counter > 0 ? '0 : map_p[symb_counter]);
-			loc_index <= frame_counter > N_pream - 1 ? map_i :  map_p[symb_counter];
+        if(symb_counter < fftsize) 
+		
+		loc_index <= ((frame_counter > N_pream - 1) && ~data_off) ? map_i :  map_p_l;
+		
         else 
 		    loc_index <= '0;
 
@@ -232,7 +223,7 @@ always @(posedge clk_h) begin
         loc_oreq <= '0;
     else if(ready_frame && frame_counter > N_pream - 1 && next_symb && map_i == 2'd1 && ss_counter == 5'd0)
         loc_oreq <= '1;
-    else if(ival || (oreq && map_i != 2'd1))
+    else if(ival || (oreq && map_i!= 2'd1))
         loc_oreq <= '0;
     else
         loc_oreq <= loc_oreq;
@@ -311,15 +302,14 @@ end
 
 always @(posedge clk) begin
     if(rst)
-        symb_counter <= size_sumb -1;
+        symb_counter_2 <= size_sumb -1;
     else if(enable)
-        if(symb_counter == size_sumb -1) 
-            symb_counter <= '0;
+        if(symb_counter_2 == size_sumb -1) 
+            symb_counter_2 <= '0;
         else
-            symb_counter <= symb_counter + 1'b1;
+            symb_counter_2 <= symb_counter_2 + 1'b1;
     else  
-        symb_counter <= size_sumb - 1;
-
+        symb_counter_2 <= size_sumb - 1;
 end
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -334,5 +324,40 @@ always @(posedge clk) begin
         else 
             ss_counter <= ss_counter + 1'd1;
 end
+
+
+
+map_i_ram#(
+	.depht_ram	(sz_count),
+	//.map_path   (file_map_symb),
+	//.CFG ("map_i"),
+	.fftsize    (fftsize),
+	.Num_bw     (6)
+)
+map_i_ram_sub
+(
+	.clk	(clk),
+	.addr	(symb_counter_2),
+	.index_bw	(index_bw),
+	.odat	 (map_i)
+);
+
+
+map_p_ram#(
+	.depht_ram	(sz_count),
+	//.map_path   (file_map_pream),
+	//.CFG ("map_p"),
+	.fftsize    (fftsize),
+	.Num_bw     (6)
+)
+map_p_ram_sub
+(
+	.clk	     (clk),
+	.addr	    (symb_counter_2),
+	.index_bw	(index_bw),
+	.odat	 (map_p_l)
+);
+
+
 
 endmodule

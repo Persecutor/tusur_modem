@@ -2,21 +2,21 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Aug 20 11:32:07 2025
-# Process ID: 5904
-# Current directory: F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1
+# Start of session at: Mon Sep  1 15:02:04 2025
+# Process ID: 2572
+# Current directory: F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1
 # Command line: vivado.exe -log design_1_only_tx_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_only_tx_0_0.tcl
-# Log file: F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1/design_1_only_tx_0_0.vds
-# Journal file: F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1\vivado.jou
+# Log file: F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1/design_1_only_tx_0_0.vds
+# Journal file: F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_only_tx_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/ip_repo/IP_sync_1.0'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/library'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/ip_repo/IP_sync_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/library'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/Vivado/2019.1/data/ip'.
-WARNING: [IP_Flow 19-1663] Duplicate IP found for 'analog.com:user:util_clkdiv:1.0'. The one found in IP location 'f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/library/util_clkdiv' will take precedence over the same IP in location f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/library/xilinx/util_clkdiv
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'analog.com:user:util_clkdiv:1.0'. The one found in IP location 'f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/library/util_clkdiv' will take precedence over the same IP in location f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/library/xilinx/util_clkdiv
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
-Current IP cache path is f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.cache/ip 
+Current IP cache path is f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.cache/ip 
 Command: synth_design -top design_1_only_tx_0_0 -part xc7k325tffg676-2 -mode out_of_context
 Starting synth_design
 WARNING: [IP_Flow 19-3571] IP 'design_1_only_tx_0_0' is restricted:
@@ -25,32 +25,32 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
 INFO: [Device 21-403] Loading part xc7k325tffg676-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5664 
-WARNING: [Synth 8-992] pack_sop is already implicitly declared earlier [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/FEC.sv:334]
-WARNING: [Synth 8-6901] identifier 'itnerl_oreq' is used before its declaration [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/FEC.sv:71]
-WARNING: [Synth 8-6901] identifier 'itnerl_oreq' is used before its declaration [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/FEC.sv:290]
-WARNING: [Synth 8-6901] identifier 'GAP_trig' is used before its declaration [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/FEC.sv:331]
+INFO: Helper process launched with PID 8816 
+WARNING: [Synth 8-992] pack_sop is already implicitly declared earlier [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/FEC.sv:334]
+WARNING: [Synth 8-6901] identifier 'itnerl_oreq' is used before its declaration [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/FEC.sv:71]
+WARNING: [Synth 8-6901] identifier 'itnerl_oreq' is used before its declaration [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/FEC.sv:290]
+WARNING: [Synth 8-6901] identifier 'GAP_trig' is used before its declaration [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/FEC.sv:331]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 870.754 ; gain = 180.730
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 869.605 ; gain = 181.980
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_only_tx_0_0' [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_tx_0_0/synth/design_1_only_tx_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'only_tx' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/only_tx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'design_1_only_tx_0_0' [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_tx_0_0/synth/design_1_only_tx_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'only_tx' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/only_tx.v:1]
 	Parameter Validate_en bound to: 1 - type: integer 
 	Parameter MaxOrderModulat bound to: 6 - type: integer 
 	Parameter fft_depth bound to: 4 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/only_tx.v:40]
-INFO: [Synth 8-6157] synthesizing module 'prbs_gen23' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/prbs/prbs23_gen.sv:36]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/only_tx.v:40]
+INFO: [Synth 8-6157] synthesizing module 'prbs_gen23' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/prbs/prbs23_gen.sv:36]
 	Parameter pDAT_W bound to: 32'sb00000000000000000000000000001000 
 	Parameter pMSB_FIRST bound to: 1'b0 
 	Parameter cTYPE bound to: 23 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'prbs_gen23' (1#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/prbs/prbs23_gen.sv:36]
-INFO: [Synth 8-6157] synthesizing module 'transport_block_shaper' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/transport_block_shaper.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'prbs_gen23' (1#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/prbs/prbs23_gen.sv:36]
+INFO: [Synth 8-6157] synthesizing module 'transport_block_shaper' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/transport_block_shaper.sv:1]
 	Parameter size_tblck bound to: 476 - type: integer 
 	Parameter time_to_wait bound to: 5 - type: integer 
 	Parameter szCB bound to: 9 - type: integer 
 	Parameter szCW bound to: 3 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'transport_block_shaper' (2#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/transport_block_shaper.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'FEC' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/FEC.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'transport_block_shaper' (2#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/transport_block_shaper.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'FEC' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/FEC.sv:23]
 	Parameter BYTBLOCK_DATA bound to: 240 - type: integer 
 	Parameter CRCLEN bound to: 2 - type: integer 
 	Parameter BYTBLOCK_CODE bound to: 288 - type: integer 
@@ -59,18 +59,18 @@ INFO: [Synth 8-6157] synthesizing module 'FEC' [F:/work/Izhevsk_project_2_1/Izhe
 	Parameter pN bound to: 32'sb00000000000000000000100100000000 
 	Parameter pDAT_W bound to: 32'sb00000000000000000000000000000100 
 	Parameter pTAG_W bound to: 32'sb00000000000000000000000000000100 
-INFO: [Synth 8-6157] synthesizing module 'P2S_conv_8x1' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/P2S_conv_8x1.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'P2S_conv_8x1' (3#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/P2S_conv_8x1.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'scrambler' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/scrambler.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'P2S_conv_8x1' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/P2S_conv_8x1.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'P2S_conv_8x1' (3#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/P2S_conv_8x1.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'scrambler' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/scrambler.sv:23]
 	Parameter start_state bound to: 12'b111111111111 
-INFO: [Synth 8-6155] done synthesizing module 'scrambler' (4#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/scrambler.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'coder_CRC' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/coder_CRC.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'scrambler' (4#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/scrambler.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'coder_CRC' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/coder_CRC.sv:1]
 	Parameter NUM_BITS bound to: 32'sb00000000000000000000011101110000 
-INFO: [Synth 8-6155] done synthesizing module 'coder_CRC' (5#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/coder_CRC.sv:1]
-WARNING: [Synth 8-7023] instance 'sub0_coder_CRC' of module 'coder_CRC' has 10 connections declared, but only 8 given [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/FEC.sv:115]
-INFO: [Synth 8-6157] synthesizing module 'S2P_conv_1x4' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/S2P_conv_1x4.sv:25]
-INFO: [Synth 8-6155] done synthesizing module 'S2P_conv_1x4' (6#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/S2P_conv_1x4.sv:25]
-INFO: [Synth 8-6157] synthesizing module 'ldpc_enc' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/enc/ldpc_enc.sv:82]
+INFO: [Synth 8-6155] done synthesizing module 'coder_CRC' (5#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/coder_CRC.sv:1]
+WARNING: [Synth 8-7023] instance 'sub0_coder_CRC' of module 'coder_CRC' has 10 connections declared, but only 8 given [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/FEC.sv:115]
+INFO: [Synth 8-6157] synthesizing module 'S2P_conv_1x4' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/S2P_conv_1x4.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'S2P_conv_1x4' (6#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/S2P_conv_1x4.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'ldpc_enc' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/enc/ldpc_enc.sv:82]
 	Parameter pDAT_W bound to: 32'sb00000000000000000000000000000100 
 	Parameter pTAG_W bound to: 32'sb00000000000000000000000000000100 
 	Parameter pCODE bound to: 32'sb00000000000000000000000000000101 
@@ -90,8 +90,8 @@ INFO: [Synth 8-6157] synthesizing module 'ldpc_enc' [F:/work/Izhevsk_project_2_1
 	Parameter cP2_NUM bound to: 32'sb00000000000000000000000001001000 
 	Parameter cPCNT_W bound to: 32'sb00000000000000000000000000000101 
 	Parameter cPHI_HB bound to: 32'sb00000000000000000000000000000000 
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "sequential" *) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/enc/ldpc_enc.sv:163]
-INFO: [Synth 8-6157] synthesizing module 'ldpc_enc_addr_gen' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/enc/ldpc_enc_addr_gen.sv:57]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "sequential" *) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/enc/ldpc_enc.sv:163]
+INFO: [Synth 8-6157] synthesizing module 'ldpc_enc_addr_gen' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/enc/ldpc_enc_addr_gen.sv:57]
 	Parameter pCODE bound to: 32'sb00000000000000000000000000000101 
 	Parameter pN bound to: 32'sb00000000000000000000100100000000 
 	Parameter pZF bound to: 32'sb00000000000000000000000001100000 
@@ -106,46 +106,44 @@ INFO: [Synth 8-6157] synthesizing module 'ldpc_enc_addr_gen' [F:/work/Izhevsk_pr
 	Parameter cBASE bound to: 32'sb00000000000000000000000000011000 
 	Parameter cADDR_W bound to: 32'sb00000000000000000000000000000101 
 	Parameter cCADDR_W bound to: 32'sb00000000000000000000000000000101 
-INFO: [Synth 8-6155] done synthesizing module 'ldpc_enc_addr_gen' (7#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/enc/ldpc_enc_addr_gen.sv:57]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/enc/ldpc_enc.sv:387]
+INFO: [Synth 8-6155] done synthesizing module 'ldpc_enc_addr_gen' (7#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/enc/ldpc_enc_addr_gen.sv:57]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/enc/ldpc_enc.sv:387]
 WARNING: [Synth 8-5856] 3D RAM acu_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
-WARNING: [Synth 8-6014] Unused sequential element tmp_reg was removed.  [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/enc/ldpc_enc.sv:339]
-WARNING: [Synth 8-6014] Unused sequential element tmpa_reg was removed.  [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/enc/ldpc_enc.sv:341]
-INFO: [Synth 8-6155] done synthesizing module 'ldpc_enc' (8#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/enc/ldpc_enc.sv:82]
-INFO: [Synth 8-6157] synthesizing module 'P2S_conv_4x1' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/P2S_conv_4x1.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'P2S_conv_4x1' (9#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/P2S_conv_4x1.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'interleaver' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/interleaver.sv:23]
+WARNING: [Synth 8-6014] Unused sequential element tmp_reg was removed.  [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/enc/ldpc_enc.sv:339]
+WARNING: [Synth 8-6014] Unused sequential element tmpa_reg was removed.  [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/enc/ldpc_enc.sv:341]
+INFO: [Synth 8-6155] done synthesizing module 'ldpc_enc' (8#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/enc/ldpc_enc.sv:82]
+INFO: [Synth 8-6157] synthesizing module 'P2S_conv_4x1' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/P2S_conv_4x1.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'P2S_conv_4x1' (9#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/P2S_conv_4x1.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'interleaver' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/interleaver.sv:23]
 	Parameter ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter DATA_WIDTH bound to: 13 - type: integer 
 	Parameter PACK_LEN bound to: 4608 - type: integer 
 	Parameter PRMB_LEN bound to: 128 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'interl_addr_rom' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/interl_addr_rom.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'interl_addr_rom' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/interl_addr_rom.sv:23]
 	Parameter ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter DATA_WIDTH bound to: 13 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'F:\work\Izhevsk_project_2\FPGA\EDM\FEC\addr_rand_interl.txt' is read successfully [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/interl_addr_rom.sv:38]
-INFO: [Synth 8-6155] done synthesizing module 'interl_addr_rom' (10#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/interl_addr_rom.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'interl_ram' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/interl_ram.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'interl_addr_rom' (10#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/interl_addr_rom.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'interl_ram' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/interl_ram.sv:23]
 	Parameter ADDR_WIDTH bound to: 14 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'F:\work\Izhevsk_project_2\FPGA\EDM\FEC\prbm_mem.txt' is read successfully [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/interl_ram.sv:42]
-INFO: [Synth 8-6155] done synthesizing module 'interl_ram' (11#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/interl_ram.sv:23]
-WARNING: [Synth 8-6014] Unused sequential element delay_val_reg was removed.  [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/interleaver.sv:80]
-INFO: [Synth 8-6155] done synthesizing module 'interleaver' (12#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/EDM/FEC/interleaver.sv:23]
-WARNING: [Synth 8-5788] Register tail_counter_reg in module FEC is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/FEC.sv:181]
-WARNING: [Synth 8-3848] Net S2P_ireq in module/entity FEC does not have driver. [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/FEC.sv:135]
-INFO: [Synth 8-6155] done synthesizing module 'FEC' (13#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/FEC.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'TX_phy' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/TX_phy.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'interl_ram' (11#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/interl_ram.sv:23]
+WARNING: [Synth 8-6014] Unused sequential element delay_val_reg was removed.  [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/interleaver.sv:80]
+INFO: [Synth 8-6155] done synthesizing module 'interleaver' (12#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/EDM/FEC/interleaver.sv:23]
+WARNING: [Synth 8-5788] Register tail_counter_reg in module FEC is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/FEC.sv:181]
+WARNING: [Synth 8-3848] Net S2P_ireq in module/entity FEC does not have driver. [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/FEC.sv:135]
+INFO: [Synth 8-6155] done synthesizing module 'FEC' (13#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/FEC.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'TX_phy' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/TX_phy.sv:1]
 	Parameter MaxOrderModulat bound to: 6 - type: integer 
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter pBMAX bound to: 12 - type: integer 
 	Parameter pDAT_W bound to: 12 - type: integer 
 	Parameter pLLR_W bound to: 5 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'control' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/control.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'control' (14#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/control.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'series2parallel' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/series2parallel.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'control' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/control.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'control' (14#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/control.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'series2parallel' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/series2parallel.sv:23]
 	Parameter maxWordOut bound to: 6 - type: integer 
 	Parameter count_depth bound to: 3 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'series2parallel' (15#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/series2parallel.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'mapper' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/mapper.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'series2parallel' (15#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/series2parallel.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mapper' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/mapper.sv:25]
 	Parameter maxWordOut bound to: 6 - type: integer 
 	Parameter frame_size bound to: 50 - type: integer 
 	Parameter pream_size bound to: 1560 - type: integer 
@@ -153,61 +151,61 @@ INFO: [Synth 8-6157] synthesizing module 'mapper' [F:/work/Izhevsk_project_2_1/I
 	Parameter size_sumb bound to: 1056 - type: integer 
 	Parameter sz_count bound to: 11 - type: integer 
 	Parameter sz_count_p bound to: 7 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/mapper.sv:39]
-INFO: [Synth 8-6157] synthesizing module 'map_i_ram' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/map_i_ram.sv:2]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/mapper.sv:39]
+INFO: [Synth 8-6157] synthesizing module 'map_i_ram' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/map_i_ram.sv:2]
 	Parameter depht_ram bound to: 11 - type: integer 
 	Parameter fftsize bound to: 1024 - type: integer 
 	Parameter Num_bw bound to: 6 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/map_i_ram.sv:39]
-WARNING: [Synth 8-87] always_comb on 'odat_reg' did not result in combinational logic [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/map_i_ram.sv:40]
-INFO: [Synth 8-6155] done synthesizing module 'map_i_ram' (16#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/map_i_ram.sv:2]
-INFO: [Synth 8-6157] synthesizing module 'map_p_ram' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/map_p_ram.sv:2]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/map_i_ram.sv:39]
+WARNING: [Synth 8-87] always_comb on 'odat_reg' did not result in combinational logic [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/map_i_ram.sv:40]
+INFO: [Synth 8-6155] done synthesizing module 'map_i_ram' (16#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/map_i_ram.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'map_p_ram' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/map_p_ram.sv:2]
 	Parameter depht_ram bound to: 11 - type: integer 
 	Parameter fftsize bound to: 1024 - type: integer 
 	Parameter Num_bw bound to: 6 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/map_p_ram.sv:39]
-WARNING: [Synth 8-87] always_comb on 'odat_reg' did not result in combinational logic [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/map_p_ram.sv:40]
-INFO: [Synth 8-6155] done synthesizing module 'map_p_ram' (17#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/map_p_ram.sv:2]
-WARNING: [Synth 8-6014] Unused sequential element loc_oreq_reg was removed.  [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/mapper.sv:223]
-INFO: [Synth 8-6155] done synthesizing module 'mapper' (18#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/mapper.sv:25]
-INFO: [Synth 8-6157] synthesizing module 'modulator' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/modulator.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/map_p_ram.sv:39]
+WARNING: [Synth 8-87] always_comb on 'odat_reg' did not result in combinational logic [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/map_p_ram.sv:40]
+INFO: [Synth 8-6155] done synthesizing module 'map_p_ram' (17#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/map_p_ram.sv:2]
+WARNING: [Synth 8-6014] Unused sequential element loc_oreq_reg was removed.  [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/mapper.sv:223]
+INFO: [Synth 8-6155] done synthesizing module 'mapper' (18#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/mapper.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'modulator' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/modulator.sv:23]
 	Parameter maxBitOrder bound to: 6 - type: integer 
 	Parameter fft_depth bound to: 12 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'qpsk_mod' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/modulators/qpsk_mod.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'qpsk_mod' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/modulators/qpsk_mod.sv:23]
 	Parameter maxBitOrder bound to: 6 - type: integer 
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter levels bound to: 12'b011111010000 
-INFO: [Synth 8-6155] done synthesizing module 'qpsk_mod' (19#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/modulators/qpsk_mod.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'qpsk_mod__parameterized0' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/modulators/qpsk_mod.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'qpsk_mod' (19#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/modulators/qpsk_mod.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'qpsk_mod__parameterized0' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/modulators/qpsk_mod.sv:23]
 	Parameter maxBitOrder bound to: 6 - type: integer 
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter levels bound to: 12'b010000000000 
-INFO: [Synth 8-6155] done synthesizing module 'qpsk_mod__parameterized0' (19#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/modulators/qpsk_mod.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'qam16_mod' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/modulators/qam16_mod.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'qpsk_mod__parameterized0' (19#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/modulators/qpsk_mod.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'qam16_mod' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/modulators/qam16_mod.sv:23]
 	Parameter maxBitOrder bound to: 6 - type: integer 
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter levels_0 bound to: 12'b001000000000 
 	Parameter levels_1 bound to: 12'b011000000000 
-INFO: [Synth 8-6155] done synthesizing module 'qam16_mod' (20#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/modulators/qam16_mod.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'qam64_mod' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/modulators/qam64_mod.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'qam16_mod' (20#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/modulators/qam16_mod.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'qam64_mod' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/modulators/qam64_mod.sv:23]
 	Parameter maxBitOrder bound to: 6 - type: integer 
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter levels_0 bound to: 12'b000100000000 
 	Parameter levels_1 bound to: 12'b001100000000 
 	Parameter levels_2 bound to: 12'b010100000000 
 	Parameter levels_3 bound to: 12'b011100000000 
-INFO: [Synth 8-6155] done synthesizing module 'qam64_mod' (21#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/modulators/qam64_mod.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'modulator' (22#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/modulator.sv:23]
-WARNING: [Synth 8-7023] instance 'modulator_sub' of module 'modulator' has 15 connections declared, but only 14 given [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/TX_phy.sv:127]
-INFO: [Synth 8-6157] synthesizing module 'scramb_subcarier' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/scramb_subcarier.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'qam64_mod' (21#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/modulators/qam64_mod.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'modulator' (22#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/modulator.sv:23]
+WARNING: [Synth 8-7023] instance 'modulator_sub' of module 'modulator' has 15 connections declared, but only 14 given [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/TX_phy.sv:127]
+INFO: [Synth 8-6157] synthesizing module 'scramb_subcarier' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/scramb_subcarier.sv:1]
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter init_state bound to: 15'b101101011010000 
-INFO: [Synth 8-6155] done synthesizing module 'scramb_subcarier' (23#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/scramb_subcarier.sv:1]
-WARNING: [Synth 8-7023] instance 'scramb_subcarier_sub' of module 'scramb_subcarier' has 18 connections declared, but only 14 given [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/TX_phy.sv:157]
-INFO: [Synth 8-6157] synthesizing module 'ifft' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/ifft.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'scramb_subcarier' (23#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/scramb_subcarier.sv:1]
+WARNING: [Synth 8-7023] instance 'scramb_subcarier_sub' of module 'scramb_subcarier' has 18 connections declared, but only 14 given [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/TX_phy.sv:157]
+INFO: [Synth 8-6157] synthesizing module 'ifft' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/ifft.sv:1]
 	Parameter fft_depth bound to: 12 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_ifft' [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/synth/axis_data_fifo_ifft.v:58]
-INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_v2_0_1_top' [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_data_fifo_v2_0_vl_rfs.v:54]
+INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_ifft' [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/synth/axis_data_fifo_ifft.v:58]
+INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_v2_0_1_top' [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_data_fifo_v2_0_vl_rfs.v:54]
 	Parameter C_FAMILY bound to: kintex7 - type: string 
 	Parameter C_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
@@ -261,7 +259,7 @@ INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_v2_0_1_top' [f:/work/Iz
 	Parameter LP_WR_DATA_COUNT_WIDTH bound to: 7 - type: integer 
 	Parameter LP_S_ACLKEN_CAN_TOGGLE bound to: 0 - type: integer 
 	Parameter LP_M_ACLKEN_CAN_TOGGLE bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_aclken_converter_wrapper' [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_infrastructure_v1_1_vl_rfs.v:600]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_aclken_converter_wrapper' [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_infrastructure_v1_1_vl_rfs.v:600]
 	Parameter C_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_TID_WIDTH bound to: 1 - type: integer 
 	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
@@ -289,7 +287,7 @@ INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_aclken
 	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
 	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
 	Parameter P_TPAYLOAD_WIDTH bound to: 44 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
 	Parameter C_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_TID_WIDTH bound to: 1 - type: integer 
 	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
@@ -322,8 +320,8 @@ INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2v
 	Parameter P_TID_INDX bound to: 41 - type: integer 
 	Parameter P_TDEST_INDX bound to: 42 - type: integer 
 	Parameter P_TUSER_INDX bound to: 43 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' (24#1) [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
-INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' (24#1) [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
 	Parameter C_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_TID_WIDTH bound to: 1 - type: integer 
 	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
@@ -356,8 +354,8 @@ INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_vector
 	Parameter P_TID_INDX bound to: 41 - type: integer 
 	Parameter P_TDEST_INDX bound to: 42 - type: integer 
 	Parameter P_TUSER_INDX bound to: 43 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' (25#1) [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
-INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_aclken_converter_wrapper' (26#1) [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_infrastructure_v1_1_vl_rfs.v:600]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' (25#1) [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_aclken_converter_wrapper' (26#1) [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_infrastructure_v1_1_vl_rfs.v:600]
 INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_axis' [F:/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2219]
 	Parameter CLOCKING_MODE bound to: common_clock - type: string 
 	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
@@ -570,10 +568,10 @@ INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (32#1) [F:/Vivado/
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_axis' (33#1) [F:/Vivado/2019.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2219]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'axis_data_fifo_v2_0_1_top' (34#1) [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_data_fifo_v2_0_vl_rfs.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'axis_data_fifo_v2_0_1_top' (34#1) [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/hdl/axis_data_fifo_v2_0_vl_rfs.v:54]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'axis_data_fifo_ifft' (35#1) [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/synth/axis_data_fifo_ifft.v:58]
-INFO: [Synth 8-638] synthesizing module 'xfft_time_freq' [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/synth/xfft_time_freq.vhd:83]
+INFO: [Synth 8-6155] done synthesizing module 'axis_data_fifo_ifft' (35#1) [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/synth/axis_data_fifo_ifft.v:58]
+INFO: [Synth 8-638] synthesizing module 'xfft_time_freq' [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/synth/xfft_time_freq.vhd:83]
 	Parameter C_XDEVICEFAMILY bound to: kintex7 - type: string 
 	Parameter C_S_AXIS_CONFIG_TDATA_WIDTH bound to: 8 - type: integer 
 	Parameter C_S_AXIS_DATA_TDATA_WIDTH bound to: 32 - type: integer 
@@ -607,32 +605,32 @@ INFO: [Synth 8-638] synthesizing module 'xfft_time_freq' [f:/work/Izhevsk_projec
 	Parameter C_OPTIMIZE_GOAL bound to: 0 - type: integer 
 	Parameter C_CMPY_TYPE bound to: 1 - type: integer 
 	Parameter C_BFLY_TYPE bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xfft_v9_1_2' declared at 'f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/hdl/xfft_v9_1_vh_rfs.vhd:103134' bound to instance 'U0' of component 'xfft_v9_1_2' [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/synth/xfft_time_freq.vhd:189]
-INFO: [Synth 8-256] done synthesizing module 'xfft_time_freq' (91#1) [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/synth/xfft_time_freq.vhd:83]
-WARNING: [Synth 8-689] width (5) of port connection 'm_axis_data_tuser' does not match port width (8) of module 'xfft_time_freq' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/ifft.sv:68]
-WARNING: [Synth 8-7023] instance 'xilinx_ifft_sub' of module 'xfft_time_freq' has 19 connections declared, but only 15 given [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/ifft.sv:55]
+INFO: [Synth 8-3491] module 'xfft_v9_1_2' declared at 'f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/hdl/xfft_v9_1_vh_rfs.vhd:103134' bound to instance 'U0' of component 'xfft_v9_1_2' [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/synth/xfft_time_freq.vhd:189]
+INFO: [Synth 8-256] done synthesizing module 'xfft_time_freq' (91#1) [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/xfft_time_freq/synth/xfft_time_freq.vhd:83]
+WARNING: [Synth 8-689] width (5) of port connection 'm_axis_data_tuser' does not match port width (8) of module 'xfft_time_freq' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/ifft.sv:68]
+WARNING: [Synth 8-7023] instance 'xilinx_ifft_sub' of module 'xfft_time_freq' has 19 connections declared, but only 15 given [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/ifft.sv:55]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'ifft' (92#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/ifft.sv:1]
-WARNING: [Synth 8-7023] instance 'ifft_sub' of module 'ifft' has 13 connections declared, but only 12 given [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/TX_phy.sv:187]
-INFO: [Synth 8-6157] synthesizing module 'add_cp' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/add_cp.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'ifft' (92#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/ifft.sv:1]
+WARNING: [Synth 8-7023] instance 'ifft_sub' of module 'ifft' has 13 connections declared, but only 12 given [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/TX_phy.sv:187]
+INFO: [Synth 8-6157] synthesizing module 'add_cp' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/add_cp.sv:1]
 	Parameter fft_depth bound to: 12 - type: integer 
 	Parameter fftsize bound to: 1024 - type: integer 
 	Parameter cpsize bound to: 32 - type: integer 
 	Parameter framesize bound to: 1056 - type: integer 
 	Parameter count_depth bound to: 11 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'add_cp' (93#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/add_cp.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'fftshift' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/fftshift.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'add_cp' (93#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/add_cp.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'fftshift' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/fftshift.sv:1]
 	Parameter fft_depth bound to: 12 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'fftshift' (94#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/Tx/fftshift.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'fftshift' (94#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/Tx/fftshift.sv:1]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'TX_phy' (95#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/TX_phy.sv:1]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'TX_phy_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/only_tx.v:111]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'FEC_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/only_tx.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'TX_phy' (95#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/TX_phy.sv:1]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'TX_phy_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/only_tx.v:111]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'FEC_sub'. This will prevent further optimization [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/only_tx.v:95]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-WARNING: [Synth 8-3848] Net s_axis_tready in module/entity only_tx does not have driver. [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/only_tx.v:16]
-INFO: [Synth 8-6155] done synthesizing module 'only_tx' (96#1) [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/only_tx.v:1]
+WARNING: [Synth 8-3848] Net s_axis_tready in module/entity only_tx does not have driver. [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/only_tx.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'only_tx' (96#1) [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/only_tx.v:1]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'design_1_only_tx_0_0' (97#1) [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_tx_0_0/synth/design_1_only_tx_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_only_tx_0_0' (97#1) [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_tx_0_0/synth/design_1_only_tx_0_0.v:58]
 WARNING: [Synth 8-3331] design add_cp has unconnected port isop
 WARNING: [Synth 8-3331] design shift_ram__parameterized81 has unconnected port D1
 WARNING: [Synth 8-3331] design shift_ram__parameterized81 has unconnected port SCLR
@@ -735,7 +733,7 @@ WARNING: [Synth 8-3331] design c_shift_ram_v12_0_13_legacy__parameterized6 has u
 WARNING: [Synth 8-3331] design shift_ram__parameterized43 has unconnected port D[0]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:02:26 ; elapsed = 00:02:31 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished RTL Elaboration : Time (s): cpu = 00:02:23 ; elapsed = 00:02:26 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -748,10 +746,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:27 ; elapsed = 00:02:32 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:24 ; elapsed = 00:02:27 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:27 ; elapsed = 00:02:32 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:24 ; elapsed = 00:02:27 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2797 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -759,10 +757,10 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_tx_0_0/design_1_only_tx_0_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [f:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_tx_0_0/design_1_only_tx_0_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_tx_0_0/design_1_only_tx_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_tx_0_0/design_1_only_tx_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1/dont_touch.xdc]
 Sourcing Tcl File [F:/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/TX_phy_sub/ifft_sub/my_fifo/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst'
 Finished Sourcing Tcl File [F:/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/TX_phy_sub/ifft_sub/my_fifo/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst'
 Sourcing Tcl File [F:/Vivado/2019.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst_axis.tcl] for cell 'inst/TX_phy_sub/ifft_sub/my_fifo/inst/gen_fifo.xpm_fifo_axis_inst'
@@ -773,7 +771,7 @@ WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2231.137 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2227.000 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 413 instances were transformed.
   FD => FDRE: 5 instances
@@ -781,27 +779,27 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 46 instances
   RAMB18 => RAMB18E1: 3 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.278 . Memory (MB): peak = 2231.137 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.264 . Memory (MB): peak = 2227.000 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:02:40 ; elapsed = 00:02:46 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished Constraint Validation : Time (s): cpu = 00:02:36 ; elapsed = 00:02:40 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k325tffg676-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:02:40 ; elapsed = 00:02:46 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:36 ; elapsed = 00:02:40 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1/dont_touch.xdc, line 15).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1/dont_touch.xdc, line 15).
 Applied set_property DONT_TOUCH = true for inst/TX_phy_sub/ifft_sub/xilinx_ifft_sub. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/TX_phy_sub/ifft_sub/my_fifo. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/TX_phy_sub/ifft_sub/my_fifo/inst/\gen_fifo.xpm_fifo_axis_inst /\gaxis_rst_sync.xpm_cdc_sync_rst_inst . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/TX_phy_sub/ifft_sub/my_fifo/inst/\gen_fifo.xpm_fifo_axis_inst . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:40 ; elapsed = 00:02:46 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:36 ; elapsed = 00:02:40 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ldpc_enc'
 WARNING: [Synth 8-6040] Register preamb_counter_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
@@ -824,8 +822,8 @@ INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for R
             cDO_P2_STATE |                              100 |                              100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ldpc_enc'
-WARNING: [Synth 8-327] inferring latch for variable 'odat_reg' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/map_i_ram.sv:40]
-WARNING: [Synth 8-327] inferring latch for variable 'odat_reg' [F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/FPGA/map_p_ram.sv:40]
+WARNING: [Synth 8-327] inferring latch for variable 'odat_reg' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/map_i_ram.sv:40]
+WARNING: [Synth 8-327] inferring latch for variable 'odat_reg' [F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/FPGA/map_p_ram.sv:40]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -844,7 +842,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_r
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_status_channel.gen_status_blk_exp.we_current_state_reg' using encoding 'one-hot' in module 'axi_wrapper'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:52 ; elapsed = 00:02:59 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:49 ; elapsed = 00:02:52 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1122,7 +1120,7 @@ INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/FEC_
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/FEC_sub/\tail_counter_reg[0]_LDC )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/FEC_sub/\tail_counter_reg[1]_LDC )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:26 ; elapsed = 00:03:34 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:27 ; elapsed = 00:03:32 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6837] The timing for the instance inst/FEC_sub/i_174/sub0_interliver/sub0_interl_addr_rom/adress_for_interliv_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance inst/FEC_sub/i_174/sub0_interliver/sub0_interl_addr_rom/adress_for_interliv_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
@@ -1142,13 +1140,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:38 ; elapsed = 00:03:46 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:39 ; elapsed = 00:03:43 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:39 ; elapsed = 00:03:47 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished Timing Optimization : Time (s): cpu = 00:03:40 ; elapsed = 00:03:44 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1167,7 +1165,7 @@ INFO: [Synth 8-6837] The timing for the instance inst/FEC_sub/sub0_interliver/su
 INFO: [Synth 8-6837] The timing for the instance inst/TX_phy_sub/mapper_sub/map_i_ram_sub/map_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance inst/TX_phy_sub/mapper_sub/map_p_ram_sub/map_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:44 ; elapsed = 00:03:52 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished Technology Mapping : Time (s): cpu = 00:03:45 ; elapsed = 00:03:50 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1192,7 +1190,7 @@ Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3295] tying undriven pin ifft_sub/xilinx_ifft_sub:s_axis_data_tlast to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:46 ; elapsed = 00:03:54 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished IO Insertion : Time (s): cpu = 00:03:47 ; elapsed = 00:03:52 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1205,7 +1203,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:46 ; elapsed = 00:03:54 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:47 ; elapsed = 00:03:52 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1217,25 +1215,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:48 ; elapsed = 00:03:56 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:49 ; elapsed = 00:03:54 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:48 ; elapsed = 00:03:56 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:49 ; elapsed = 00:03:54 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:48 ; elapsed = 00:03:56 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:49 ; elapsed = 00:03:54 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:48 ; elapsed = 00:03:56 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:49 ; elapsed = 00:03:54 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1290,17 +1288,17 @@ Report Cell Usage:
 |37    |LD         |     3|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:48 ; elapsed = 00:03:56 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:49 ; elapsed = 00:03:54 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1508 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:13 ; elapsed = 00:03:47 . Memory (MB): peak = 2231.137 ; gain = 1541.113
-Synthesis Optimization Complete : Time (s): cpu = 00:03:49 ; elapsed = 00:03:57 . Memory (MB): peak = 2231.137 ; gain = 1541.113
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:17 ; elapsed = 00:03:46 . Memory (MB): peak = 2227.000 ; gain = 1539.375
+Synthesis Optimization Complete : Time (s): cpu = 00:03:49 ; elapsed = 00:03:54 . Memory (MB): peak = 2227.000 ; gain = 1539.375
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 3205 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2231.137 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2227.000 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1030 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 356 instances
@@ -1314,18 +1312,18 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAMB18 => RAMB18E1: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-407 Infos, 133 Warnings, 0 Critical Warnings and 0 Errors encountered.
+405 Infos, 133 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:00 ; elapsed = 00:04:10 . Memory (MB): peak = 2231.137 ; gain = 1843.371
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2231.137 ; gain = 0.000
+synth_design: Time (s): cpu = 00:04:01 ; elapsed = 00:04:07 . Memory (MB): peak = 2227.000 ; gain = 1838.957
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2227.000 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1/design_1_only_tx_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1/design_1_only_tx_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1174] Renamed 837 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2231.137 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2227.000 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'F:/work/Izhevsk_project_2_1/Izhevsk_project_2_1/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1/design_1_only_tx_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.runs/design_1_only_tx_0_0_synth_1/design_1_only_tx_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_only_tx_0_0_utilization_synth.rpt -pb design_1_only_tx_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Aug 20 11:36:44 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Sep  1 15:06:30 2025...

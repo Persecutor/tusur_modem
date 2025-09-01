@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+`include "../../input_data/prbm_mem.svh"
 module interl_ram
 #(
   parameter ADDR_WIDTH  =  14
@@ -36,15 +36,15 @@ module interl_ram
   output   wire                        read_data_out
 );
 
-  reg   ram  [2**ADDR_WIDTH-1:0];
+/*  reg   ram  [2**ADDR_WIDTH-1:0];
  
   initial begin
      $readmemb("F:\\work\\Izhevsk_project_2\\FPGA\\EDM\\FEC\\prbm_mem.txt", ram);                            
-  end   
+  end */  
 
- 	assign read_data_out = ram[r_ram_counter];
+ 	assign read_data_out = prbm_mem[r_ram_counter];
   	always @ (posedge clk) begin
-		ram[wr_ram_counter] <= in_bit_data ;
+		prbm_mem[wr_ram_counter] <= in_bit_data ;
 	end
   
 endmodule

@@ -110,7 +110,7 @@
     <Object name="design_1_i/mqc_t_0/inst/oready_buff" gui_info="Trigger Setup=0"/>
     <Object name="design_1_i/mqc_t_0/iready_corr_wr" gui_info=""/>
     <Object name="design_1_i/mqc_t_0_odata_buff_0[15:0]" gui_info="Trigger Setup=0"/>
-    <Object name="design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[23:0]" gui_info="Trigger Setup=0"/>
+    <Object name="design_1_i/only_rx_0/inst/RX_phy_sub/xcorr_main_sub/data_abs_mx[23:0]" gui_info=""/>
     <Object name="design_1_i/only_rx_0_N_err[23:0]" gui_info="hw_vios/hw_vio_1=5"/>
     <Object name="design_1_i/only_rx_0_N_sop_detect[14:0]" gui_info="hw_vios/hw_vio_1=4"/>
     <Object name="design_1_i/only_rx_0_delta_ph[23:0]" gui_info="hw_vios/hw_vio_1=14"/>
@@ -8673,7 +8673,7 @@
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
-        <Option Id="COMPARE_VALUE.0" value="gteq24&apos;u1"/>
+        <Option Id="COMPARE_VALUE.0" value="eq24&apos;hXX_XXXX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
@@ -8684,7 +8684,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Short"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="gteq24&apos;u1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq24&apos;hXX_XXXX"/>
         <Option Id="WAVEFORM_STYLE" value="Analog"/>
       </probeOptions>
       <nets>
@@ -11064,7 +11064,7 @@
         <Option Id="HW_VIO" value="hw_vio_1"/>
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Short"/>
-        <Option Id="OUTPUT_VALUE" value="0"/>
+        <Option Id="OUTPUT_VALUE" value="1"/>
         <Option Id="OUTPUT_VALUE_RADIX" value="BINARY"/>
         <Option Id="SOURCE" value="netlist"/>
       </probeOptions>

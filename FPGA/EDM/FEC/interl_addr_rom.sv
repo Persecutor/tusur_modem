@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+`include "../../input_data/addr_rand_interl.svh"
 module interl_addr_rom
 #( 
   parameter ADDR_WIDTH	=	13,
@@ -31,15 +31,15 @@ module interl_addr_rom
 	output	reg			[(DATA_WIDTH-1):0]	adress_for_interliv
 );
 
-	reg [DATA_WIDTH-1:0]	rom	[2**ADDR_WIDTH-1:0];
+/*	reg [DATA_WIDTH-1:0]	rom	[2**ADDR_WIDTH-1:0];
 
 	initial
 	begin
 		$readmemb("F:\\work\\Izhevsk_project_2\\FPGA\\EDM\\FEC\\addr_rand_interl.txt", rom);
-	end
+	end*/
 
 	always @ (posedge clk) begin
-		adress_for_interliv <= rom[adress_for_adress];
+		adress_for_interliv <= addr_rand_interl[adress_for_adress];
 	end
 
 endmodule

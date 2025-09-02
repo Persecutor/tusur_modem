@@ -6,6 +6,22 @@
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
+      <spirit:name>validate</spirit:name>
+      <spirit:busType spirit:vendor="analog.com" spirit:library="interface" spirit:name="fifo_rd" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="analog.com" spirit:library="interface" spirit:name="fifo_rd_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>EN</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>validate_en</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
       <spirit:name>s_axis</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
@@ -722,7 +738,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:12d1feef</spirit:value>
+            <spirit:value>9:22c90a31</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -736,11 +752,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 01 08:01:15 UTC 2025</spirit:value>
+            <spirit:value>Tue Sep 02 03:51:11 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:12d1feef</spirit:value>
+            <spirit:value>9:22c90a31</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -756,11 +772,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 01 08:01:15 UTC 2025</spirit:value>
+            <spirit:value>Tue Sep 02 03:51:11 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:12d1feef</spirit:value>
+            <spirit:value>9:22c90a31</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -772,7 +788,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6a3795fc</spirit:value>
+            <spirit:value>9:5c277174</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -788,11 +804,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 01 08:01:15 UTC 2025</spirit:value>
+            <spirit:value>Tue Sep 02 03:51:11 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6a3795fc</spirit:value>
+            <spirit:value>9:5c277174</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -806,11 +822,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Sep 01 08:06:30 UTC 2025</spirit:value>
+            <spirit:value>Tue Sep 02 03:57:07 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:12d1feef</spirit:value>
+            <spirit:value>9:22c90a31</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1041,6 +1057,22 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>validate_en</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>tx_i_axis_tdata</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -1133,13 +1165,6 @@
         </spirit:wire>
       </spirit:port>
     </spirit:ports>
-    <spirit:modelParameters>
-      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
-        <spirit:name>Validate_en</spirit:name>
-        <spirit:displayName>Validate En</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.Validate_en">1</spirit:value>
-      </spirit:modelParameter>
-    </spirit:modelParameters>
   </spirit:model>
   <spirit:fileSets>
     <spirit:fileSet>
@@ -1207,11 +1232,6 @@
   </spirit:fileSets>
   <spirit:description>xilinx.com:module_ref:only_tx:1.0</spirit:description>
   <spirit:parameters>
-    <spirit:parameter>
-      <spirit:name>Validate_en</spirit:name>
-      <spirit:displayName>Validate En</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.Validate_en">1</spirit:value>
-    </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">design_1_only_tx_0_0</spirit:value>

@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Mon Sep  1 15:01:14 2025
+//Date        : Tue Sep  2 11:54:30 2025
 //Host        : TOR00094 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -4456,6 +4456,7 @@ module design_1
   wire [0:0]vio_switch_tx_ad;
   wire [23:0]vio_trh_lvl;
   wire [0:0]vio_tx_rst;
+  wire [0:0]vio_validate_on;
   wire [15:0]xlconstant_0_dout;
   wire [15:0]xlconstant_1_dout;
   wire [7:0]xlconstant_3_dout;
@@ -5094,7 +5095,8 @@ module design_1
         .tx_i_axis_tready(1'b1),
         .tx_q_axis_aclk(AD9361_CTRL_clk_out1),
         .tx_q_axis_tdata(only_tx_0_osub_q),
-        .tx_q_axis_tready(1'b1));
+        .tx_q_axis_tready(1'b1),
+        .validate_en(vio_validate_on));
   design_1_switch_0_1 switch_0
        (.iimdata_ad(dout_data_5),
         .iimdata_tx(only_tx_0_osub_q),
@@ -5112,6 +5114,7 @@ module design_1
         .probe_in4(only_rx_0_kb_ps),
         .probe_out0(vio_ss_in),
         .probe_out1(vio_m_in),
+        .probe_out10(vio_validate_on),
         .probe_out2(vio_addr_shift),
         .probe_out3(vio_trh_lvl),
         .probe_out4(vio_rst_rx),

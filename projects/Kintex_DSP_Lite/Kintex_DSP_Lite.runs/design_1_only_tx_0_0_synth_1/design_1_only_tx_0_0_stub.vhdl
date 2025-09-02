@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Mon Sep  1 15:06:19 2025
+-- Date        : Tue Sep  2 10:56:56 2025
 -- Host        : TOR00094 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_only_tx_0_0_stub.vhdl
@@ -29,6 +29,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     s_axis_aclk : in STD_LOGIC;
     tx_i_axis_aclk : in STD_LOGIC;
     tx_q_axis_aclk : in STD_LOGIC;
+    validate_en : in STD_LOGIC;
     tx_i_axis_tdata : out STD_LOGIC_VECTOR ( 15 downto 0 );
     tx_i_axis_tvalid : out STD_LOGIC;
     tx_i_axis_tready : in STD_LOGIC;
@@ -43,7 +44,7 @@ architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clk_l,clk_h,rst,ss_in[3:0],m_in[2:0],bw_in[2:0],data_off_tx,s_axis_tdata[7:0],s_axis_tvalid,s_axis_tlast,s_axis_tuser[0:0],s_axis_tready,s_axis_aclk,tx_i_axis_aclk,tx_q_axis_aclk,tx_i_axis_tdata[15:0],tx_i_axis_tvalid,tx_i_axis_tready,tx_q_axis_tdata[15:0],tx_q_axis_tvalid,tx_q_axis_tready";
+attribute black_box_pad_pin of stub : architecture is "clk_l,clk_h,rst,ss_in[3:0],m_in[2:0],bw_in[2:0],data_off_tx,s_axis_tdata[7:0],s_axis_tvalid,s_axis_tlast,s_axis_tuser[0:0],s_axis_tready,s_axis_aclk,tx_i_axis_aclk,tx_q_axis_aclk,validate_en,tx_i_axis_tdata[15:0],tx_i_axis_tvalid,tx_i_axis_tready,tx_q_axis_tdata[15:0],tx_q_axis_tvalid,tx_q_axis_tready";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "only_tx,Vivado 2019.1";
 begin

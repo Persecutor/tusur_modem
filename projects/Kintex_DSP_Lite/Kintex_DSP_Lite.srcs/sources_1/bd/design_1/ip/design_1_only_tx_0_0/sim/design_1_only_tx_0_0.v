@@ -70,6 +70,7 @@ module design_1_only_tx_0_0 (
   s_axis_aclk,
   tx_i_axis_aclk,
   tx_q_axis_aclk,
+  validate_en,
   tx_i_axis_tdata,
   tx_i_axis_tvalid,
   tx_i_axis_tready,
@@ -107,6 +108,8 @@ input wire tx_i_axis_aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME tx_q_axis_aclk, ASSOCIATED_BUSIF tx_q_axis, FREQ_HZ 30720000, PHASE 0.0, CLK_DOMAIN design_1_clk_DSP_0_sample_rate_30_72, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 tx_q_axis_aclk CLK" *)
 input wire tx_q_axis_aclk;
+(* X_INTERFACE_INFO = "analog.com:interface:fifo_rd:1.0 validate EN" *)
+input wire validate_en;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 tx_i_axis TDATA" *)
 output wire [15 : 0] tx_i_axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 tx_i_axis TVALID" *)
@@ -122,9 +125,7 @@ output wire tx_q_axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 tx_q_axis TREADY" *)
 input wire tx_q_axis_tready;
 
-  only_tx #(
-    .Validate_en(1)
-  ) inst (
+  only_tx inst (
     .clk_l(clk_l),
     .clk_h(clk_h),
     .rst(rst),
@@ -140,6 +141,7 @@ input wire tx_q_axis_tready;
     .s_axis_aclk(s_axis_aclk),
     .tx_i_axis_aclk(tx_i_axis_aclk),
     .tx_q_axis_aclk(tx_q_axis_aclk),
+    .validate_en(validate_en),
     .tx_i_axis_tdata(tx_i_axis_tdata),
     .tx_i_axis_tvalid(tx_i_axis_tvalid),
     .tx_i_axis_tready(tx_i_axis_tready),

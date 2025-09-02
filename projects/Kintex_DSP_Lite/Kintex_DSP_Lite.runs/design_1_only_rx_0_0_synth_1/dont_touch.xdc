@@ -22,13 +22,13 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==xfft_time_freq 
 # IP: F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/axis_data_fifo_ifft.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axis_data_fifo_ifft || ORIG_REF_NAME==axis_data_fifo_ifft} -quiet] -quiet
 
-# IP: F:/work/modem_ofdm_0/modem_ofdm/IP_libs/cordic_0/cordic_0.xci
+# IP: f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_0/cordic_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cordic_0 || ORIG_REF_NAME==cordic_0} -quiet] -quiet
 
-# IP: f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_fr_corr/div_gen_fr_corr.xci
+# IP: F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_fr_corr/div_gen_fr_corr.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==div_gen_fr_corr || ORIG_REF_NAME==div_gen_fr_corr} -quiet] -quiet
 
-# IP: f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_2/cordic_2.xci
+# IP: F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_2/cordic_2.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cordic_2 || ORIG_REF_NAME==cordic_2} -quiet] -quiet
 
 # IP: F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/ifft_corr_1_1/ifft_corr_1.xci
@@ -65,13 +65,13 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 # IP: F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft/axis_data_fifo_ifft.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axis_data_fifo_ifft || ORIG_REF_NAME==axis_data_fifo_ifft} -quiet] -quiet
 
-# IP: F:/work/modem_ofdm_0/modem_ofdm/IP_libs/cordic_0/cordic_0.xci
+# IP: f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_0/cordic_0.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cordic_0 || ORIG_REF_NAME==cordic_0} -quiet] -quiet
 
-# IP: f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_fr_corr/div_gen_fr_corr.xci
+# IP: F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_fr_corr/div_gen_fr_corr.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==div_gen_fr_corr || ORIG_REF_NAME==div_gen_fr_corr} -quiet] -quiet
 
-# IP: f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_2/cordic_2.xci
+# IP: F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_2/cordic_2.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cordic_2 || ORIG_REF_NAME==cordic_2} -quiet] -quiet
 
 # IP: F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/ifft_corr_1_1/ifft_corr_1.xci

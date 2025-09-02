@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k325tffg676-2" LaunchTime="1756713721">
+<GenRun Id="impl_1" LaunchPart="xc7k325tffg676-2" LaunchTime="1756788916">
   <File Type="BITSTR-BMM" Name="design_1_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="design_1_wrapper_timing_summary_init.rpt"/>
@@ -414,7 +414,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../../modem_ofdm_0/modem_ofdm/IP_libs/cordic_0/cordic_0.xci">
+    <File Path="$PSRCDIR/sources_1/ip/cordic_0/cordic_0.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -853,7 +853,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../switch.v">
+    <File Path="$PPRDIR/../../FPGA/switch.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -1035,7 +1035,7 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_only_rx_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_on_off_f1956_data_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_SPI_MUX_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_switch_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_vio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_only_tx_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_switch_0_1"/>
 </GenRun>

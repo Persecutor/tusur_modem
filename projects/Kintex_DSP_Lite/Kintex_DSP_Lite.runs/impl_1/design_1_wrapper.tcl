@@ -66,7 +66,9 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 1
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7k325tffg676-2
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
@@ -89,9 +91,9 @@ set rc [catch {
   read_ip -quiet F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_fhy_defec/axis_data_fifo_fhy_defec.xci
   read_ip -quiet F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci
   read_ip -quiet F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_0/div_gen_0.xci
-  read_ip -quiet F:/work/modem_ofdm_0/modem_ofdm/IP_libs/cordic_0/cordic_0.xci
-  read_ip -quiet f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_fr_corr/div_gen_fr_corr.xci
-  read_ip -quiet f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_2/cordic_2.xci
+  read_ip -quiet f:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_0/cordic_0.xci
+  read_ip -quiet F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/div_gen_fr_corr/div_gen_fr_corr.xci
+  read_ip -quiet F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/cordic_2/cordic_2.xci
   read_ip -quiet F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/ifft_corr_1_1/ifft_corr_1.xci
   read_ip -quiet F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/axis_data_fifo_ifft_corr/axis_data_fifo_ifft_corr.xci
   read_ip -quiet F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/ip/fft_corr_1/fft_corr_1.xci

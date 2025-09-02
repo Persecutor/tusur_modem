@@ -2048,7 +2048,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_EN_PROBE_IN_ACTIVITY {0} \
    CONFIG.C_NUM_PROBE_IN {5} \
-   CONFIG.C_NUM_PROBE_OUT {10} \
+   CONFIG.C_NUM_PROBE_OUT {11} \
    CONFIG.C_PROBE_OUT0_INIT_VAL {0x1} \
    CONFIG.C_PROBE_OUT0_WIDTH {4} \
    CONFIG.C_PROBE_OUT1_INIT_VAL {0x2} \
@@ -2242,6 +2242,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net vio_switch_tx_ad [get_bd_pins switch_0/switch_on] [get_bd_pins vio_0/probe_out5]
   connect_bd_net -net vio_trh_lvl [get_bd_pins only_rx_0/thr_lvl] [get_bd_pins vio_0/probe_out3]
   connect_bd_net -net vio_tx_rst [get_bd_pins only_tx_0/rst] [get_bd_pins vio_0/probe_out7]
+  connect_bd_net -net vio_validate_on [get_bd_pins only_tx_0/validate_en] [get_bd_pins vio_0/probe_out10]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins AXI_Peripheral/fifo_wr_data_0] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins AXI_Peripheral/fifo_wr_data_1] [get_bd_pins xlconstant_1/dout]
   connect_bd_net -net xlconstant_3_dout [get_bd_pins only_tx_0/s_axis_tdata] [get_bd_pins xlconstant_3/dout]

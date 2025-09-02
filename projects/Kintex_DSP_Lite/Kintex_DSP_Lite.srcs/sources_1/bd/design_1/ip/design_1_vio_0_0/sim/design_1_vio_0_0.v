@@ -58,7 +58,8 @@ probe_out5,
 probe_out6,
 probe_out7,
 probe_out8,
-probe_out9
+probe_out9,
+probe_out10
 );
 
 input clk;
@@ -78,6 +79,7 @@ output reg [2 : 0] probe_out6 = 'h0 ;
 output reg [0 : 0] probe_out7 = 'h0 ;
 output reg [1 : 0] probe_out8 = 'h0 ;
 output reg [0 : 0] probe_out9 = 'h0 ;
+output reg [0 : 0] probe_out10 = 'h0 ;
 
 
 endmodule

@@ -21,7 +21,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==mult_gen_0 || O
 # IP: ip/div_gen_0/div_gen_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==div_gen_0 || ORIG_REF_NAME==div_gen_0} -quiet] -quiet
 
-# IP: F:/work/modem_ofdm_0/modem_ofdm/IP_libs/cordic_0/cordic_0.xci
+# IP: ip/cordic_0/cordic_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cordic_0 || ORIG_REF_NAME==cordic_0} -quiet] -quiet
 
 # IP: ip/div_gen_fr_corr/div_gen_fr_corr.xci
@@ -273,7 +273,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_only_r
 # IP: ip/axis_data_fifo_ifft/axis_data_fifo_ifft.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==axis_data_fifo_ifft || ORIG_REF_NAME==axis_data_fifo_ifft} -quiet] -quiet
 
-# IP: F:/work/modem_ofdm_0/modem_ofdm/IP_libs/cordic_0/cordic_0.xci
+# IP: ip/cordic_0/cordic_0.xci
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==cordic_0 || ORIG_REF_NAME==cordic_0} -quiet] -quiet
 
 # IP: ip/div_gen_fr_corr/div_gen_fr_corr.xci

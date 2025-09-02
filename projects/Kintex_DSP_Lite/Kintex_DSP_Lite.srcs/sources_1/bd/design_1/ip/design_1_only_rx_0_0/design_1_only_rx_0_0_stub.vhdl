@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Mon Sep  1 15:17:18 2025
+-- Date        : Tue Sep  2 11:07:35 2025
 -- Host        : TOR00094 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               F:/work/Izhevsk_project_2_2/Izhevsk_project_2_2/projects/Kintex_DSP_Lite/Kintex_DSP_Lite.srcs/sources_1/bd/design_1/ip/design_1_only_rx_0_0/design_1_only_rx_0_0_stub.vhdl

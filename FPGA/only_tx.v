@@ -1,6 +1,5 @@
-module only_tx#(
-	parameter Validate_en = 1
-)(
+module only_tx
+(
 	input 						clk_l,
 	input						clk_h,
 	input						rst,
@@ -17,7 +16,7 @@ module only_tx#(
 	input						s_axis_aclk,
 	input						tx_i_axis_aclk,
 	input						tx_q_axis_aclk,
-
+	input						validate_en,
 
 
 	
@@ -34,8 +33,7 @@ module only_tx#(
 
 
 
-localparam MaxOrderModulat 	= 6;
-localparam fft_depth        = 4;
+
 
 (* mark_debug = "true" *) wire phy_fec_req, phy_fec_dat, phy_fec_val;
 wire signed [7:0]		fifo_defec_dat;
@@ -72,17 +70,17 @@ prbs_gen23_sub
 );
 
 
-assign s_axis_tdata_r  = Validate_en ? s_axis_tdata_l  : s_axis_tdata;
-assign s_axis_tready_r = Validate_en ? s_axis_tready_l : s_axis_tready;
-assign s_axis_tvalid_r = Validate_en ? s_axis_tvalid_l : s_axis_tvalid;
+assign s_axis_tdata_r  = validate_en ? s_axis_tdata_l  : s_axis_tdata;
+assign s_axis_tready   = s_axis_tready_l;
+assign s_axis_tvalid_r = validate_en ? s_axis_tvalid_l : s_axis_tvalid;
 
 
 transport_block_shaper #(476, 5)
 transport_block_shaper_sub(
 	.clk		(clk_h),
 	.rst		(~rst),
-	.ival		(s_axis_tvalid_l),
-	.idata		(s_axis_tdata_l),
+	.ival		(s_axis_tvalid_r),
+	.idata		(s_axis_tdata_r),
 	.ireq		(tbs_req),
 
 	.oval		(tbs_val),

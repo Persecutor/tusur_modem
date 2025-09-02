@@ -40,13 +40,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="189"/>
-    <Option Name="WTModelSimExportSim" Val="189"/>
-    <Option Name="WTQuestaExportSim" Val="189"/>
-    <Option Name="WTIesExportSim" Val="189"/>
-    <Option Name="WTVcsExportSim" Val="189"/>
-    <Option Name="WTRivieraExportSim" Val="189"/>
-    <Option Name="WTActivehdlExportSim" Val="188"/>
+    <Option Name="WTXSimExportSim" Val="190"/>
+    <Option Name="WTModelSimExportSim" Val="190"/>
+    <Option Name="WTQuestaExportSim" Val="190"/>
+    <Option Name="WTIesExportSim" Val="190"/>
+    <Option Name="WTVcsExportSim" Val="190"/>
+    <Option Name="WTRivieraExportSim" Val="190"/>
+    <Option Name="WTActivehdlExportSim" Val="189"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -404,7 +404,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../modem_ofdm_0/modem_ofdm/IP_libs/cordic_0/cordic_0.xci">
+      <File Path="$PSRCDIR/sources_1/ip/cordic_0/cordic_0.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -843,7 +843,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../switch.v">
+      <File Path="$PPRDIR/../../FPGA/switch.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -858,59 +858,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ibuf_0_0/design_1_ibuf_0_0.xci">
-          <Proxy FileSetName="design_1_ibuf_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_FPGA_reset_0/design_1_FPGA_reset_0.xci">
-          <Proxy FileSetName="design_1_FPGA_reset_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_1_2/design_1_RAshift16_4_up_1_2.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_1_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_1_1/design_1_RAshift16_4_up_1_1.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_1_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_on_off_f1956_clk_0/design_1_on_off_f1956_clk_0.xci">
-          <Proxy FileSetName="design_1_on_off_f1956_clk_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_SPI_MUX_0/design_1_SPI_MUX_0.xci">
-          <Proxy FileSetName="design_1_SPI_MUX_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_3_2/design_1_RAshift16_4_up_3_2.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_3_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_2_2/design_1_RAshift16_4_up_2_2.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_2_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_3_1/design_1_RAshift16_4_up_3_1.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_3_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_on_off_f1956_data_0/design_1_on_off_f1956_data_0.xci">
-          <Proxy FileSetName="design_1_on_off_f1956_data_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_0_1/design_1_RAshift16_4_up_0_1.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_0_1"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_1_0/design_1_RAshift16_4_up_1_0.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_2_0/design_1_RAshift16_4_up_2_0.xci">
           <Proxy FileSetName="design_1_RAshift16_4_up_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_3_0/design_1_RAshift16_4_up_3_0.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_3_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_FPGA_reset_0/design_1_FPGA_reset_0.xci">
+          <Proxy FileSetName="design_1_FPGA_reset_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_0_0/design_1_RAshift16_4_up_0_0.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_0_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_ibuf_0_0/design_1_ibuf_0_0.xci">
+          <Proxy FileSetName="design_1_ibuf_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_only_tx_0_0/design_1_only_tx_0_0.xci">
-          <Proxy FileSetName="design_1_only_tx_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_vio_0_0/design_1_vio_0_0.xci">
-          <Proxy FileSetName="design_1_vio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_0_2/design_1_RAshift16_4_up_0_2.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_only_rx_0_0/design_1_only_rx_0_0.xci">
-          <Proxy FileSetName="design_1_only_rx_0_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_SPI_MUX_0/design_1_SPI_MUX_0.xci">
+          <Proxy FileSetName="design_1_SPI_MUX_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_switch_0_1/design_1_switch_0_1.xci">
           <Proxy FileSetName="design_1_switch_0_1"/>
@@ -918,8 +879,47 @@
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_2_1/design_1_RAshift16_4_up_2_1.xci">
           <Proxy FileSetName="design_1_RAshift16_4_up_2_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_1_0/design_1_RAshift16_4_up_1_0.xci">
-          <Proxy FileSetName="design_1_RAshift16_4_up_1_0"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_3_1/design_1_RAshift16_4_up_3_1.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_3_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_1_2/design_1_RAshift16_4_up_1_2.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_1_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_vio_0_0/design_1_vio_0_0.xci">
+          <Proxy FileSetName="design_1_vio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_0_2/design_1_RAshift16_4_up_0_2.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_2_2/design_1_RAshift16_4_up_2_2.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_2_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_only_tx_0_0/design_1_only_tx_0_0.xci">
+          <Proxy FileSetName="design_1_only_tx_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_0_0/design_1_RAshift16_4_up_0_0.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_0_1/design_1_RAshift16_4_up_0_1.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_3_0/design_1_RAshift16_4_up_3_0.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_on_off_f1956_data_0/design_1_on_off_f1956_data_0.xci">
+          <Proxy FileSetName="design_1_on_off_f1956_data_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_1_1/design_1_RAshift16_4_up_1_1.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_1_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_on_off_f1956_clk_0/design_1_on_off_f1956_clk_0.xci">
+          <Proxy FileSetName="design_1_on_off_f1956_clk_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_RAshift16_4_up_3_2/design_1_RAshift16_4_up_3_2.xci">
+          <Proxy FileSetName="design_1_RAshift16_4_up_3_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_only_rx_0_0/design_1_only_rx_0_0.xci">
+          <Proxy FileSetName="design_1_only_rx_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
@@ -1052,14 +1052,6 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../Modem_tb.v">
-        <FileInfo SFType="SVerilog">
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="only_rx"/>
@@ -1188,15 +1180,15 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_switch_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_switch_0_1">
-      <Config>
-        <Option Name="TopModule" Val="design_1_switch_0_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="design_1_vio_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_vio_0_0">
       <Config>
         <Option Name="TopModule" Val="design_1_vio_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_1_only_rx_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_only_rx_0_0">
+      <Config>
+        <Option Name="TopModule" Val="design_1_only_rx_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -1206,9 +1198,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_1_only_rx_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_only_rx_0_0">
+    <FileSet Name="design_1_switch_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_switch_0_1">
       <Config>
-        <Option Name="TopModule" Val="design_1_only_rx_0_0"/>
+        <Option Name="TopModule" Val="design_1_switch_0_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -1396,7 +1388,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_switch_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_switch_0_1" Part="xc7k325tffg676-2" ConstrsSet="design_1_switch_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_switch_0_1_synth_1" IncludeInArchive="true">
+    <Run Id="design_1_vio_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_vio_0_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_vio_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_vio_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -1405,7 +1397,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_vio_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_vio_0_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_vio_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_vio_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="design_1_only_rx_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_only_rx_0_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_only_rx_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_only_rx_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -1425,7 +1417,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_only_rx_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_1_only_rx_0_0" Part="xc7k325tffg676-2" ConstrsSet="design_1_only_rx_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_only_rx_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="design_1_switch_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_1_switch_0_1" Part="xc7k325tffg676-2" ConstrsSet="design_1_switch_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_switch_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -1727,7 +1719,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_switch_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_switch_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_switch_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="design_1_vio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_vio_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_vio_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1743,7 +1735,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_vio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_vio_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_vio_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="design_1_only_rx_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_only_rx_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_only_rx_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1777,7 +1769,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="design_1_only_rx_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_only_rx_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_only_rx_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="design_1_switch_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg676-2" ConstrsSet="design_1_switch_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_switch_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
           <Desc>Default settings for Implementation.</Desc>
